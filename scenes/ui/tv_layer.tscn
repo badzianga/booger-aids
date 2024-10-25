@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cgntb5myltcbu"]
+[gd_scene load_steps=8 format=3 uid="uid://cgntb5myltcbu"]
 
 [ext_resource type="Texture2D" uid="uid://brkhq1lke4spg" path="res://assets/ui/TV_Screen.png" id="1_4r1y8"]
 [ext_resource type="Script" path="res://scenes/ui/tv_layer.gd" id="1_7lwnr"]
 [ext_resource type="Shader" path="res://shaders/tv_noise.gdshader" id="1_yxcq4"]
+[ext_resource type="AudioStream" uid="uid://uwbuawexxdlv" path="res://assets/sounds/static-noise-194184.mp3" id="4_4g70u"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_gs8ea"]
 
@@ -30,3 +31,7 @@ grow_vertical = 2
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_4r1y8")
+
+[node name="StaticNoise" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_4g70u")
+bus = &"Sounds"
