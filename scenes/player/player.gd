@@ -14,7 +14,7 @@ func _input(event: InputEvent) -> void:
 		target.x = get_global_mouse_position().x
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	velocity = position.direction_to(target) * speed
 	
 	if position.distance_to(target) > 10:
