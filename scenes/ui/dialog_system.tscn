@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2uhiay838vkj"]
+
+[ext_resource type="FontFile" uid="uid://bggd4r03ecgpu" path="res://assets/fonts/Horrors.ttf" id="1_8wrle"]
+[ext_resource type="Script" path="res://scenes/ui/dialog_system.gd" id="1_mvhab"]
+
+[node name="DialogSystem" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mvhab")
+dialog_path = "res://resources/dialogs/dialogs.json"
+
+[node name="Box" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -200.0
+offset_right = 400.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.25098, 0.25098, 0.25098, 0.627451)
+
+[node name="Margin" type="MarginContainer" parent="Box"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="Center" type="CenterContainer" parent="Box/Margin"]
+layout_mode = 2
+
+[node name="TextLabel" type="RichTextLabel" parent="Box/Margin"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/normal_font = ExtResource("1_8wrle")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center]booger aids[/center]"
+fit_content = true
