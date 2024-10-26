@@ -22,6 +22,8 @@ buses/default_bus_layout="res://resources/audio_buses/default_bus_layout.tres"
 [autoload]
 
 TvLayer="*res://singletons/tv_layer.tscn"
+UserInterface="*res://singletons/user_interface.tscn"
+GlobalVariables="*res://singletons/global_variables.gd"
 
 [display]
 

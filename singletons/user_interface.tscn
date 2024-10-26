@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://b6oxfk51sfv0i"]
+[gd_scene load_steps=2 format=3 uid="uid://b6oxfk51sfv0i"]
+
+[ext_resource type="Script" path="res://singletons/user_interface.gd" id="1_3kjqh"]
 
 [node name="UserInterface" type="CanvasLayer"]
+script = ExtResource("1_3kjqh")
 
 [node name="Margin" type="MarginContainer" parent="."]
 anchors_preset = 15

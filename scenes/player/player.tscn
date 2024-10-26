@@ -29,3 +29,5 @@ collision_mask = 2
 
 [node name="CollisionShape" type="CollisionShape2D" parent="InteractableArea"]
 shape = SubResource("CapsuleShape2D_tsk86")
+
+[connection signal="area_entered" from="InteractableArea" to="." method="_on_interactable_area_area_entered"]
