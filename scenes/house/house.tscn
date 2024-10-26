@@ -1,45 +1,154 @@
 [gd_scene load_steps=8 format=3 uid="uid://d61nxx0wh2fi"]
 
 [ext_resource type="PackedScene" uid="uid://7ifmdiqbak0l" path="res://scenes/player/player.tscn" id="1_amm8k"]
-[ext_resource type="Texture2D" uid="uid://bm4qrlbtjjuyg" path="res://assets/home/sketch_floor_0.png" id="1_l38sa"]
+[ext_resource type="Texture2D" uid="uid://c4i1x641enyht" path="res://assets/home/room_blockout.png" id="1_w7r23"]
 [ext_resource type="Texture2D" uid="uid://c62j5rek1kxrs" path="res://assets/home/windows_xp.png" id="2_6g3tv"]
-[ext_resource type="PackedScene" uid="uid://dvbfdjbbakc4c" path="res://scenes/player/camera.tscn" id="3_8kjy4"]
 [ext_resource type="PackedScene" uid="uid://cw6ru4x3kiyjc" path="res://scenes/house/tv.tscn" id="3_aob1w"]
 [ext_resource type="Texture2D" uid="uid://d01xm1sep0xee" path="res://assets/home/sophie.png" id="4_l41q1"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xty2e"]
-normal = Vector2(1, 0)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m1w75"]
+size = Vector2(1205, 594)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2ne1"]
+size = Vector2(2561, 594)
 
 [node name="House" type="Node2D"]
 
 [node name="RoomLayout" type="Sprite2D" parent="."]
-texture = ExtResource("1_l38sa")
+texture = ExtResource("1_w7r23")
 centered = false
 
-[node name="WindowsXp" type="Sprite2D" parent="."]
-position = Vector2(2944, 304)
+[node name="Rooms" type="Node2D" parent="."]
+
+[node name="BasicRoomTemplate" type="Area2D" parent="Rooms"]
+position = Vector2(1304, -648)
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/BasicRoomTemplate"]
+position = Vector2(597.5, 297)
+shape = SubResource("RectangleShape2D_m1w75")
+disabled = true
+
+[node name="GrandpaRoom" type="Area2D" parent="Rooms"]
+position = Vector2(4201, 218)
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/GrandpaRoom"]
+position = Vector2(597.5, 297)
+shape = SubResource("RectangleShape2D_m1w75")
+disabled = true
+
+[node name="GrandpaHall" type="Area2D" parent="Rooms"]
+position = Vector2(5490, 215)
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/GrandpaHall"]
+position = Vector2(597.5, 297)
+shape = SubResource("RectangleShape2D_m1w75")
+disabled = true
+
+[node name="Kitchen" type="Area2D" parent="Rooms"]
+position = Vector2(6780, 216)
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/Kitchen"]
+position = Vector2(602.5, 297)
+shape = SubResource("RectangleShape2D_m1w75")
+disabled = true
+
+[node name="WindowsRoom" type="Area2D" parent="Rooms"]
+position = Vector2(1604, 951)
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/WindowsRoom"]
+position = Vector2(597.5, 297)
+shape = SubResource("RectangleShape2D_m1w75")
+disabled = true
+
+[node name="GrandmaRoom" type="Area2D" parent="Rooms"]
+position = Vector2(2907, 950)
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/GrandmaRoom"]
+position = Vector2(597.5, 297)
+shape = SubResource("RectangleShape2D_m1w75")
+disabled = true
+
+[node name="LivingRoom" type="Area2D" parent="Rooms"]
+position = Vector2(4203, 951)
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/LivingRoom"]
+position = Vector2(597.5, 297)
+shape = SubResource("RectangleShape2D_m1w75")
+disabled = true
+
+[node name="WindowsXp" type="Sprite2D" parent="Rooms/LivingRoom"]
+position = Vector2(229, 297)
 texture = ExtResource("2_6g3tv")
 
-[node name="WindowsXp2" type="Sprite2D" parent="."]
-position = Vector2(3488, 304)
+[node name="WindowsXp2" type="Sprite2D" parent="Rooms/LivingRoom"]
+position = Vector2(901, 297)
 texture = ExtResource("2_6g3tv")
 
-[node name="TV" parent="." instance=ExtResource("3_aob1w")]
-position = Vector2(3608, 504)
+[node name="TV" parent="Rooms/LivingRoom" instance=ExtResource("3_aob1w")]
+position = Vector2(821, 457)
 
-[node name="LeftBorder" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape" type="CollisionShape2D" parent="LeftBorder"]
-position = Vector2(111, 271)
-shape = SubResource("WorldBoundaryShape2D_xty2e")
-
-[node name="Sophie" type="Sprite2D" parent="."]
-position = Vector2(3104, 512)
+[node name="Sophie" type="Sprite2D" parent="Rooms/LivingRoom"]
+position = Vector2(413, 473)
 texture = ExtResource("4_l41q1")
 
+[node name="StairsGroundFloor" type="Area2D" parent="Rooms"]
+position = Vector2(5492, 953)
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/StairsGroundFloor"]
+position = Vector2(597.5, 297)
+shape = SubResource("RectangleShape2D_m1w75")
+disabled = true
+
+[node name="BathRoom" type="Area2D" parent="Rooms"]
+position = Vector2(6784, 954)
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/BathRoom"]
+position = Vector2(597.5, 297)
+shape = SubResource("RectangleShape2D_m1w75")
+disabled = true
+
+[node name="PlayRoom" type="Area2D" parent="Rooms"]
+position = Vector2(329, 1716)
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/PlayRoom"]
+position = Vector2(597.5, 297)
+shape = SubResource("RectangleShape2D_m1w75")
+disabled = true
+
+[node name="StairsMinusOne" type="Area2D" parent="Rooms"]
+position = Vector2(1618, 1712)
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/StairsMinusOne"]
+position = Vector2(597.5, 297)
+shape = SubResource("RectangleShape2D_m1w75")
+disabled = true
+
+[node name="GalleryRoom" type="Area2D" parent="Rooms"]
+position = Vector2(2912, 1713)
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/GalleryRoom"]
+position = Vector2(1269.5, 297)
+shape = SubResource("RectangleShape2D_w2ne1")
+disabled = true
+
+[node name="PuppetRoom" type="Area2D" parent="Rooms"]
+position = Vector2(1603, 2472)
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/PuppetRoom"]
+position = Vector2(597.5, 297)
+shape = SubResource("RectangleShape2D_m1w75")
+disabled = true
+
+[node name="BathRoomV2" type="Area2D" parent="Rooms"]
+position = Vector2(2908, 2473)
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/BathRoomV2"]
+position = Vector2(597.5, 297)
+shape = SubResource("RectangleShape2D_m1w75")
+disabled = true
+
 [node name="Player" parent="." instance=ExtResource("1_amm8k")]
-position = Vector2(3432, 400)
+position = Vector2(4688, 1320)
 
-[node name="Camera" parent="Player" instance=ExtResource("3_8kjy4")]
-
-[editable path="Player/Camera"]
+[node name="Camera" type="Camera2D" parent="Player"]
+offset = Vector2(0, -70)

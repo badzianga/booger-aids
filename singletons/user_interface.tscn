@@ -4,6 +4,7 @@
 
 [node name="UserInterface" type="CanvasLayer"]
 script = ExtResource("1_3kjqh")
+_time_increase_multiplier = 20.0
 
 [node name="Margin" type="MarginContainer" parent="."]
 anchors_preset = 15
@@ -14,7 +15,7 @@ grow_vertical = 2
 theme_override_constants/margin_left = 64
 theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 64
-theme_override_constants/margin_bottom = 40
+theme_override_constants/margin_bottom = 16
 
 [node name="EnergyBar" type="ProgressBar" parent="Margin"]
 custom_minimum_size = Vector2(800, 40)
