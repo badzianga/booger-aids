@@ -53,6 +53,16 @@ position = Vector2(597.5, 297)
 shape = SubResource("RectangleShape2D_m1w75")
 disabled = true
 
+[node name="StairsDown" parent="Rooms/GrandpaHall" instance=ExtResource("5_2ikdw")]
+position = Vector2(110, 369)
+
+[node name="TeleportsTo" parent="Rooms/GrandpaHall/StairsDown" index="0"]
+position = Vector2(72, 736)
+
+[node name="CollisionShape" parent="Rooms/GrandpaHall/StairsDown" index="1"]
+position = Vector2(136, 84)
+shape = SubResource("RectangleShape2D_5e1t6")
+
 [node name="Kitchen" type="Area2D" parent="Rooms"]
 position = Vector2(6780, 216)
 
@@ -118,6 +128,16 @@ position = Vector2(597.5, 297)
 shape = SubResource("RectangleShape2D_m1w75")
 disabled = true
 
+[node name="StairsUp" parent="Rooms/StairsGroundFloor" instance=ExtResource("5_2ikdw")]
+position = Vector2(252, 303)
+
+[node name="TeleportsTo" parent="Rooms/StairsGroundFloor/StairsUp" index="0"]
+position = Vector2(200, -672)
+
+[node name="CollisionShape" parent="Rooms/StairsGroundFloor/StairsUp" index="1"]
+position = Vector2(107, 115)
+shape = SubResource("RectangleShape2D_rsmh4")
+
 [node name="BathRoom" type="Area2D" parent="Rooms"]
 position = Vector2(6784, 954)
 
@@ -152,6 +172,16 @@ position = Vector2(-672, -688)
 position = Vector2(107, 115)
 shape = SubResource("RectangleShape2D_rsmh4")
 
+[node name="StairsDown" parent="Rooms/StairsMinusOne" instance=ExtResource("5_2ikdw")]
+position = Vector2(78, 368)
+
+[node name="TeleportsTo" parent="Rooms/StairsMinusOne/StairsDown" index="0"]
+position = Vector2(904, 760)
+
+[node name="CollisionShape" parent="Rooms/StairsMinusOne/StairsDown" index="1"]
+position = Vector2(136, 84)
+shape = SubResource("RectangleShape2D_5e1t6")
+
 [node name="GalleryRoom" type="Area2D" parent="Rooms"]
 position = Vector2(2912, 1713)
 
@@ -167,6 +197,16 @@ position = Vector2(1603, 2472)
 position = Vector2(597.5, 297)
 shape = SubResource("RectangleShape2D_m1w75")
 disabled = true
+
+[node name="StairsUp" parent="Rooms/PuppetRoom" instance=ExtResource("5_2ikdw")]
+position = Vector2(718, 296)
+
+[node name="TeleportsTo" parent="Rooms/PuppetRoom/StairsUp" index="0"]
+position = Vector2(-672, -688)
+
+[node name="CollisionShape" parent="Rooms/PuppetRoom/StairsUp" index="1"]
+position = Vector2(107, 115)
+shape = SubResource("RectangleShape2D_rsmh4")
 
 [node name="BathRoomV2" type="Area2D" parent="Rooms"]
 position = Vector2(2908, 2473)
@@ -248,5 +288,9 @@ speed = 800
 [node name="Camera" type="Camera2D" parent="Player"]
 offset = Vector2(0, -70)
 
+[editable path="Rooms/GrandpaHall/StairsDown"]
 [editable path="Rooms/WindowsRoom/StairsDown"]
+[editable path="Rooms/StairsGroundFloor/StairsUp"]
 [editable path="Rooms/StairsMinusOne/StairsUp"]
+[editable path="Rooms/StairsMinusOne/StairsDown"]
+[editable path="Rooms/PuppetRoom/StairsUp"]
