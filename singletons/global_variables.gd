@@ -22,7 +22,7 @@ const descriptions := {
 		"text": "A frizzy, dusty-gray wig with thinning curls, looking like it’s seen a few too many decades on an old hag's head.",
 	},
 	"leg": {
-		"name": "Grandpa's peg leg",
+		"name": "Grandpa's peg? leg",
 		"text": "A well-worn prosthetic, sturdy and crafted with care, representing Grandpa's resilience and journey through the years.",
 	},
 	"leg_fuck": {
@@ -48,6 +48,14 @@ const descriptions := {
 	"finger_fuck": {
 		"name": "Her finger",
 		"text": "Her finger.",
+	},
+	"stew": {
+		"name": "The Big Stew",
+		"text": "This huge hole in the ground contains lots of chemicals... and some organic matter?",
+	},
+	"stew_fuck": {
+		"name": "The Big Human Goulash",
+		"text": "This huge hole in the ground contains a culinary masterpiece with very unique meat.",
 	},
 }
 
