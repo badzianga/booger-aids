@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://svlqgl21d60m"]
+
+[ext_resource type="FontFile" uid="uid://bggd4r03ecgpu" path="res://assets/fonts/Horrors.ttf" id="1_4tr0f"]
+[ext_resource type="Script" path="res://scenes/ui/scary_text.gd" id="1_qyidv"]
+
+[node name="ScaryText" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_qyidv")
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Text" type="RichTextLabel" parent="Margin"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/default_color = Color(0.705882, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_4tr0f")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "[shake rate=20.0 level=50 connected=0][center]BOO HOOO[/center][/shake]"
+fit_content = true

@@ -12,7 +12,7 @@ normal = Vector2(1, 0)
 
 [node name="House" type="Node2D"]
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="RoomLayout" type="Sprite2D" parent="."]
 texture = ExtResource("1_l38sa")
 centered = false
 
