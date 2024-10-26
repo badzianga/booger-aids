@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b6oxfk51sfv0i"]
+
+[node name="UserInterface" type="CanvasLayer"]
+
+[node name="Margin" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 40
+
+[node name="EnergyBar" type="ProgressBar" parent="Margin"]
+custom_minimum_size = Vector2(800, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+value = 100.0
+show_percentage = false

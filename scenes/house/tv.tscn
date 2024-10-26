@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cw6ru4x3kiyjc"]
+
+[ext_resource type="Texture2D" uid="uid://cigkwhj1jwdql" path="res://icon.svg" id="1_l38hh"]
+[ext_resource type="Script" path="res://scenes/house/tv.gd" id="1_ojxek"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lthex"]
+size = Vector2(128, 128)
+
+[node name="TV" type="Area2D"]
+script = ExtResource("1_ojxek")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_l38hh")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_lthex")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

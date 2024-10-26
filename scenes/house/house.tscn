@@ -1,7 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://d61nxx0wh2fi"]
+[gd_scene load_steps=4 format=3 uid="uid://d61nxx0wh2fi"]
 
 [ext_resource type="PackedScene" uid="uid://7ifmdiqbak0l" path="res://scenes/player/player.tscn" id="1_amm8k"]
+[ext_resource type="Texture2D" uid="uid://br8w30a5y81jg" path="res://assets/home/house_sketch_design.jpeg" id="1_fcl3b"]
+[ext_resource type="PackedScene" uid="uid://cw6ru4x3kiyjc" path="res://scenes/house/tv.tscn" id="3_aob1w"]
 
 [node name="House" type="Node2D"]
 
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(-4516, -926)
+scale = Vector2(6.8, 6.8)
+texture = ExtResource("1_fcl3b")
+centered = false
+
 [node name="Player" parent="." instance=ExtResource("1_amm8k")]
+position = Vector2(665, 2765)
+
+[node name="Camera" type="Camera2D" parent="Player"]
+offset = Vector2(0, -180)
+
+[node name="TV" parent="." instance=ExtResource("3_aob1w")]
+position = Vector2(968, 2772)
