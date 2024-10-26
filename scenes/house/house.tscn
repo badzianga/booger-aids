@@ -15,7 +15,7 @@ texture = ExtResource("1_l38sa")
 centered = false
 
 [node name="Player" parent="." instance=ExtResource("1_amm8k")]
-position = Vector2(3432, 392)
+position = Vector2(3432, 400)
 
 [node name="Camera" parent="Player" instance=ExtResource("3_8kjy4")]
 
