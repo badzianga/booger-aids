@@ -1,26 +1,18 @@
+class_name Portal
 extends Interactable
 
-const ROTATIONS_PER_SEC := 4.0 * PI
-
-var interacting := false
-
-@onready var crank := $Crank
-
-
-func _physics_process(delta: float) -> void:
-	if interacting:
-		UserInterface.increase_time(delta)
-		crank.rotation += delta * ROTATIONS_PER_SEC
+@onready var _teleports_to := $TeleportsTo
 
 
 # THIS SHOULD BE IN EVERY INTERACTABLE -------------------------------------------------------------
 func interact() -> void:
-	print("This should be printed just when player arrives to the TV")
-	interacting = true
+	print("This should be printed just when player arrives to the stairs")
+	TvLayer.random_noise()
+	GlobalVariables.player.teleport_to(_teleports_to.global_position)
 
 
 func stop_interaction() -> void:
-	interacting = false
+	pass
 
 
 func _select_as_current() -> void:

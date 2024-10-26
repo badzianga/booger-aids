@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody2D
 
 @export var speed := 400
@@ -10,6 +11,7 @@ var just_arrived := false
 
 
 func _ready() -> void:
+	GlobalVariables.player = self
 	target = position
 
 
@@ -34,6 +36,12 @@ func _physics_process(_delta: float) -> void:
 			sprite.flip_h = true
 			sprite.position.x = -16
 		move_and_slide()
+
+
+func teleport_to(target_position: Vector2) -> void:
+	target = target_position
+	velocity = Vector2.ZERO
+	global_position = target_position
 
 
 func _on_interactable_area_area_entered(interactable: Interactable) -> void:

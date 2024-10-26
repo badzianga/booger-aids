@@ -1,13 +1,20 @@
-[gd_scene load_steps=9 format=3 uid="uid://d61nxx0wh2fi"]
+[gd_scene load_steps=12 format=3 uid="uid://d61nxx0wh2fi"]
 
 [ext_resource type="PackedScene" uid="uid://7ifmdiqbak0l" path="res://scenes/player/player.tscn" id="1_amm8k"]
 [ext_resource type="Texture2D" uid="uid://c4i1x641enyht" path="res://assets/home/room_blockout.png" id="1_w7r23"]
 [ext_resource type="Texture2D" uid="uid://c62j5rek1kxrs" path="res://assets/home/windows_xp.png" id="2_6g3tv"]
 [ext_resource type="PackedScene" uid="uid://cw6ru4x3kiyjc" path="res://scenes/house/tv.tscn" id="3_aob1w"]
 [ext_resource type="Texture2D" uid="uid://d01xm1sep0xee" path="res://assets/home/sophie.png" id="4_l41q1"]
+[ext_resource type="PackedScene" uid="uid://4frpbjvqq3ti" path="res://scenes/house/portal.tscn" id="5_2ikdw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m1w75"]
 size = Vector2(1205, 594)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5e1t6"]
+size = Vector2(272, 168)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rsmh4"]
+size = Vector2(234, 250)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w2ne1"]
 size = Vector2(2561, 594)
@@ -23,7 +30,7 @@ centered = false
 [node name="Rooms" type="Node2D" parent="."]
 
 [node name="BasicRoomTemplate" type="Area2D" parent="Rooms"]
-position = Vector2(1304, -648)
+position = Vector2(50, 55)
 
 [node name="CollisionShape" type="CollisionShape2D" parent="Rooms/BasicRoomTemplate"]
 position = Vector2(597.5, 297)
@@ -62,6 +69,16 @@ position = Vector2(597.5, 297)
 shape = SubResource("RectangleShape2D_m1w75")
 disabled = true
 
+[node name="StairsDown" parent="Rooms/WindowsRoom" instance=ExtResource("5_2ikdw")]
+position = Vector2(132, 369)
+
+[node name="TeleportsTo" parent="Rooms/WindowsRoom/StairsDown" index="0"]
+position = Vector2(880, 760)
+
+[node name="CollisionShape" parent="Rooms/WindowsRoom/StairsDown" index="1"]
+position = Vector2(136, 84)
+shape = SubResource("RectangleShape2D_5e1t6")
+
 [node name="GrandmaRoom" type="Area2D" parent="Rooms"]
 position = Vector2(2907, 950)
 
@@ -79,18 +96,18 @@ shape = SubResource("RectangleShape2D_m1w75")
 disabled = true
 
 [node name="WindowsXp" type="Sprite2D" parent="Rooms/LivingRoom"]
-position = Vector2(229, 297)
+position = Vector2(231, 295)
 texture = ExtResource("2_6g3tv")
 
 [node name="WindowsXp2" type="Sprite2D" parent="Rooms/LivingRoom"]
-position = Vector2(901, 297)
+position = Vector2(903, 295)
 texture = ExtResource("2_6g3tv")
 
 [node name="TV" parent="Rooms/LivingRoom" instance=ExtResource("3_aob1w")]
-position = Vector2(821, 457)
+position = Vector2(823, 455)
 
 [node name="Sophie" type="Sprite2D" parent="Rooms/LivingRoom"]
-position = Vector2(413, 473)
+position = Vector2(415, 471)
 texture = ExtResource("4_l41q1")
 
 [node name="StairsGroundFloor" type="Area2D" parent="Rooms"]
@@ -125,6 +142,16 @@ position = Vector2(597.5, 297)
 shape = SubResource("RectangleShape2D_m1w75")
 disabled = true
 
+[node name="StairsUp" parent="Rooms/StairsMinusOne" instance=ExtResource("5_2ikdw")]
+position = Vector2(718, 296)
+
+[node name="TeleportsTo" parent="Rooms/StairsMinusOne/StairsUp" index="0"]
+position = Vector2(-672, -688)
+
+[node name="CollisionShape" parent="Rooms/StairsMinusOne/StairsUp" index="1"]
+position = Vector2(107, 115)
+shape = SubResource("RectangleShape2D_rsmh4")
+
 [node name="GalleryRoom" type="Area2D" parent="Rooms"]
 position = Vector2(2912, 1713)
 
@@ -148,12 +175,6 @@ position = Vector2(2908, 2473)
 position = Vector2(597.5, 297)
 shape = SubResource("RectangleShape2D_m1w75")
 disabled = true
-
-[node name="Player" parent="." instance=ExtResource("1_amm8k")]
-position = Vector2(4688, 1320)
-
-[node name="Camera" type="Camera2D" parent="Player"]
-offset = Vector2(0, -70)
 
 [node name="Columns" type="Node2D" parent="."]
 
@@ -219,3 +240,13 @@ z_index = 1
 position = Vector2(2855, 2770)
 scale = Vector2(94.0002, 646)
 texture = SubResource("CanvasTexture_lrghs")
+
+[node name="Player" parent="." instance=ExtResource("1_amm8k")]
+position = Vector2(4688, 1320)
+speed = 800
+
+[node name="Camera" type="Camera2D" parent="Player"]
+offset = Vector2(0, -70)
+
+[editable path="Rooms/WindowsRoom/StairsDown"]
+[editable path="Rooms/StairsMinusOne/StairsUp"]

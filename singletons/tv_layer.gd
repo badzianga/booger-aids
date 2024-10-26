@@ -11,10 +11,14 @@ signal noise_finished
 # TODO: temporary for testing purposes
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
-		enable_noise(randf_range(0.2, 0.5))
+		random_noise()
 	funny_noise.position.y += delta * 400
 	if funny_noise.position.y >= 1000:
 		funny_noise.position.y = -250
+
+
+func random_noise() -> void:
+	enable_noise(randf_range(0.2, 0.5))
 
 
 func enable_noise(time: float) -> void:
