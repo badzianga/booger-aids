@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvbfdjbbakc4c"]
+
+[ext_resource type="Script" path="res://scenes/player/camera.gd" id="1_yj1y5"]
+
+[node name="Camera" type="Camera2D"]
+offset = Vector2(0, -60)
+script = ExtResource("1_yj1y5")
+
+[node name="LeftLimit" type="Marker2D" parent="."]
+position = Vector2(-3608, -136)
+
+[node name="RightLimit" type="Marker2D" parent="."]
+position = Vector2(2984, -136)
