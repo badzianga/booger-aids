@@ -6,6 +6,7 @@ extends CharacterBody2D
 var target: Vector2
 var arrived := false
 var just_arrived := false
+var mouse_in_room := false  # set in room script
 
 @onready var sprite := $Sprite
 
@@ -17,6 +18,8 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"click"):
+		if not mouse_in_room:
+			return
 		print("Clicked, so moving to position: ", global_position)
 		# TODO: this sh!t will backfire for sure when
 		if GlobalVariables.current_interactable != null:
