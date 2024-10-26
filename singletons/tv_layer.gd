@@ -4,6 +4,8 @@ extends CanvasLayer
 @onready var _static_noise := $StaticNoise
 @onready var _timer := $Timer
 
+signal noise_finished
+
 
 # TODO: temporary for testing purposes
 func _physics_process(_delta: float) -> void:
@@ -20,3 +22,4 @@ func enable_noise(time: float) -> void:
 func _on_timer_timeout() -> void:
 	_static_noise.playing = false
 	_white.visible = false
+	noise_finished.emit()
