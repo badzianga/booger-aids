@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 buses/default_bus_layout="res://resources/audio_buses/default_bus_layout.tres"
 
+[autoload]
+
+TvLayer="*res://singletons/tv_layer.tscn"
+
 [display]
 
 window/size/viewport_width=1280

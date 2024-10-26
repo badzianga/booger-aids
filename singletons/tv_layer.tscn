@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cgntb5myltcbu"]
 
 [ext_resource type="Texture2D" uid="uid://brkhq1lke4spg" path="res://assets/ui/TV_Screen.png" id="1_4r1y8"]
-[ext_resource type="Script" path="res://scenes/ui/tv_layer.gd" id="1_7lwnr"]
+[ext_resource type="Script" path="res://singletons/tv_layer.gd" id="1_7lwnr"]
 [ext_resource type="Shader" path="res://shaders/tv_noise.gdshader" id="1_yxcq4"]
 [ext_resource type="AudioStream" uid="uid://uwbuawexxdlv" path="res://assets/sounds/static-noise-194184.mp3" id="4_4g70u"]
 
@@ -19,8 +19,17 @@ shader_parameter/noise = SubResource("NoiseTexture2D_rkino")
 [node name="TVLayer" type="CanvasLayer"]
 script = ExtResource("1_7lwnr")
 
-[node name="Noise" type="ColorRect" parent="."]
+[node name="White" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Noise" type="ColorRect" parent="White"]
 material = SubResource("ShaderMaterial_cxxwy")
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -35,3 +44,8 @@ texture = ExtResource("1_4r1y8")
 [node name="StaticNoise" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_4g70u")
 bus = &"Sounds"
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
