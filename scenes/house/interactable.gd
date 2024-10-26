@@ -9,6 +9,10 @@ func interact() -> void:
 	print_debug("THIS SHOULD NOT BE PRINTED!")
 
 
+func stop_interaction() -> void:
+	print_debug("THIS SHOULD NOT BE PRINTED")
+
+
 func _handle_input_event(event: InputEvent) -> void:
 	if not event is InputEventMouse:
 		return
@@ -25,4 +29,4 @@ func _set_arrow() -> void:
 
 
 func _select_as_current() -> void:
-	print("THIS SHOULD NOT PRINT!")
+	print_debug("THIS SHOULD NOT BE PRINTED")

@@ -9,7 +9,7 @@ float rand(vec2 uv) {
 }
 
 void fragment() {
-	vec4 screen_color = texture(SCREEN_TEXTURE, SCREEN_UV);
+	vec4 screen_color = texture(TEXTURE, UV);
 	vec4 noise_tex = texture(noise, UV);
 	
 	vec4 random_color = vec4(rand(vec2(noise_tex.r, noise_tex.r) + TIME), rand(vec2(noise_tex.g, noise_tex.g) + vec2(1.0) + TIME), rand(vec2(noise_tex.b, noise_tex.b) + vec2(3.0) + TIME), 1.0);

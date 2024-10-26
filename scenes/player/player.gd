@@ -17,6 +17,8 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"click"):
 		print("Clicked, so moving to position: ", global_position)
 		# TODO: this sh!t will backfire for sure when
+		if GlobalVariables.current_interactable != null:
+			GlobalVariables.current_interactable.stop_interaction()
 		GlobalVariables.current_interactable = null
 		target.x = get_global_mouse_position().x
 

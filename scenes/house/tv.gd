@@ -1,17 +1,26 @@
 extends Interactable
 
+const ROTATIONS_PER_SEC := 4.0 * PI
 
 var interacting := false
+
+@onready var crank := $Crank
 
 
 func _physics_process(delta: float) -> void:
 	if interacting:
 		UserInterface.increase_time(delta)
+		crank.rotation += delta * ROTATIONS_PER_SEC
 
 
 # THIS SHOULD BE IN EVERY INTERACTABLE -------------------------------------------------------------
 func interact() -> void:
 	print("This should be printed just when player arrives to the TV")
+	interacting = true
+
+# TODO: stop interaction
+func stop_interaction() -> void:
+	interacting = false
 
 
 func _select_as_current() -> void:

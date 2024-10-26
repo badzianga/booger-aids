@@ -18,6 +18,7 @@ func set_enabled(enabled: bool) -> void:
 
 func increase_time(delta: float) -> void:
 	_energy_bar.value = min(_energy_bar.value + delta * _time_increase_multiplier, _max_bar_value)
+	_light_level.energy = 1.0 - (_energy_bar.value / _max_bar_value)
 
 
 func _physics_process(delta: float) -> void:

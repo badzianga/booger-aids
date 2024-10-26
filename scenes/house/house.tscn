@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://d61nxx0wh2fi"]
+[gd_scene load_steps=8 format=3 uid="uid://d61nxx0wh2fi"]
 
 [ext_resource type="PackedScene" uid="uid://7ifmdiqbak0l" path="res://scenes/player/player.tscn" id="1_amm8k"]
 [ext_resource type="Texture2D" uid="uid://bm4qrlbtjjuyg" path="res://assets/home/sketch_floor_0.png" id="1_l38sa"]
+[ext_resource type="Texture2D" uid="uid://c62j5rek1kxrs" path="res://assets/home/windows_xp.png" id="2_6g3tv"]
 [ext_resource type="PackedScene" uid="uid://dvbfdjbbakc4c" path="res://scenes/player/camera.tscn" id="3_8kjy4"]
 [ext_resource type="PackedScene" uid="uid://cw6ru4x3kiyjc" path="res://scenes/house/tv.tscn" id="3_aob1w"]
+[ext_resource type="Texture2D" uid="uid://d01xm1sep0xee" path="res://assets/home/sophie.png" id="4_l41q1"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xty2e"]
 normal = Vector2(1, 0)
@@ -14,18 +16,30 @@ normal = Vector2(1, 0)
 texture = ExtResource("1_l38sa")
 centered = false
 
-[node name="Player" parent="." instance=ExtResource("1_amm8k")]
-position = Vector2(3432, 400)
+[node name="WindowsXp" type="Sprite2D" parent="."]
+position = Vector2(2944, 304)
+texture = ExtResource("2_6g3tv")
 
-[node name="Camera" parent="Player" instance=ExtResource("3_8kjy4")]
+[node name="WindowsXp2" type="Sprite2D" parent="."]
+position = Vector2(3488, 304)
+texture = ExtResource("2_6g3tv")
 
 [node name="TV" parent="." instance=ExtResource("3_aob1w")]
-position = Vector2(968, 2772)
+position = Vector2(3608, 504)
 
 [node name="LeftBorder" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape" type="CollisionShape2D" parent="LeftBorder"]
 position = Vector2(111, 271)
 shape = SubResource("WorldBoundaryShape2D_xty2e")
+
+[node name="Sophie" type="Sprite2D" parent="."]
+position = Vector2(3104, 512)
+texture = ExtResource("4_l41q1")
+
+[node name="Player" parent="." instance=ExtResource("1_amm8k")]
+position = Vector2(3432, 400)
+
+[node name="Camera" parent="Player" instance=ExtResource("3_8kjy4")]
 
 [editable path="Player/Camera"]
