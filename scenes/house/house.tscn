@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d61nxx0wh2fi"]
+[gd_scene load_steps=9 format=3 uid="uid://d61nxx0wh2fi"]
 
 [ext_resource type="PackedScene" uid="uid://7ifmdiqbak0l" path="res://scenes/player/player.tscn" id="1_amm8k"]
 [ext_resource type="Texture2D" uid="uid://c4i1x641enyht" path="res://assets/home/room_blockout.png" id="1_w7r23"]
@@ -11,6 +11,8 @@ size = Vector2(1205, 594)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w2ne1"]
 size = Vector2(2561, 594)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_lrghs"]
 
 [node name="House" type="Node2D"]
 
@@ -152,3 +154,68 @@ position = Vector2(4688, 1320)
 
 [node name="Camera" type="Camera2D" parent="Player"]
 offset = Vector2(0, -70)
+
+[node name="Columns" type="Node2D" parent="."]
+
+[node name="Column" type="Sprite2D" parent="Columns"]
+modulate = Color(0, 0, 0, 1)
+z_index = 1
+position = Vector2(5444, 527)
+scale = Vector2(94.0002, 646)
+texture = SubResource("CanvasTexture_lrghs")
+
+[node name="Column2" type="Sprite2D" parent="Columns"]
+modulate = Color(0, 0, 0, 1)
+z_index = 1
+position = Vector2(6734, 501)
+scale = Vector2(94.0002, 646)
+texture = SubResource("CanvasTexture_lrghs")
+
+[node name="Column3" type="Sprite2D" parent="Columns"]
+modulate = Color(0, 0, 0, 1)
+z_index = 1
+position = Vector2(2854, 1259)
+scale = Vector2(94.0002, 646)
+texture = SubResource("CanvasTexture_lrghs")
+
+[node name="Column4" type="Sprite2D" parent="Columns"]
+modulate = Color(0, 0, 0, 1)
+z_index = 1
+position = Vector2(4154, 1257)
+scale = Vector2(94.0002, 646)
+texture = SubResource("CanvasTexture_lrghs")
+
+[node name="Column5" type="Sprite2D" parent="Columns"]
+modulate = Color(0, 0, 0, 1)
+z_index = 1
+position = Vector2(5444, 1273)
+scale = Vector2(94.0002, 646)
+texture = SubResource("CanvasTexture_lrghs")
+
+[node name="Column6" type="Sprite2D" parent="Columns"]
+modulate = Color(0, 0, 0, 1)
+z_index = 1
+position = Vector2(6734, 1269)
+scale = Vector2(94.0002, 646)
+texture = SubResource("CanvasTexture_lrghs")
+
+[node name="Column7" type="Sprite2D" parent="Columns"]
+modulate = Color(0, 0, 0, 1)
+z_index = 1
+position = Vector2(1576, 2019)
+scale = Vector2(94.0002, 646)
+texture = SubResource("CanvasTexture_lrghs")
+
+[node name="Column8" type="Sprite2D" parent="Columns"]
+modulate = Color(0, 0, 0, 1)
+z_index = 1
+position = Vector2(2855, 2023)
+scale = Vector2(94.0002, 646)
+texture = SubResource("CanvasTexture_lrghs")
+
+[node name="Column9" type="Sprite2D" parent="Columns"]
+modulate = Color(0, 0, 0, 1)
+z_index = 1
+position = Vector2(2855, 2770)
+scale = Vector2(94.0002, 646)
+texture = SubResource("CanvasTexture_lrghs")
