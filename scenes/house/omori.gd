@@ -9,7 +9,7 @@ func spook() -> void:
 
 
 func _on_spook_area_body_entered(_body: Node2D) -> void:
-	print("Boo!")
+	#print("Boo!")
 	spook()
 	boo.play()
 	await get_tree().create_timer(0.2).timeout

@@ -46,12 +46,12 @@ STEW
 
 func random_text() -> void:
 	var r: String = texts.keys().pick_random()
-	print("Picked random key for scary text: ", r)
+	#print("Picked random key for scary text: ", r)
 	set_text(r)
 
 
 func set_text(id: String) -> void:
-	print("Text content: ", texts[id]["text"])
+	#print("Text content: ", texts[id]["text"])
 	$Margin/Text.text = "[shake rate=20.0 level=%d connected=%d][center]%s[/center][/shake]" % [
 		texts[id]["level"], texts[id]["connected"], texts[id]["text"]
 	]

@@ -6,11 +6,13 @@ const MouseKidNamedFinger := preload("res://assets/mouse/hand.png")
 
 
 func interact() -> void:
-	print_debug("THIS SHOULD NOT BE PRINTED!")
+	pass
+	#print_debug("THIS SHOULD NOT BE #printED!")
 
 
 func stop_interaction() -> void:
-	print_debug("THIS SHOULD NOT BE PRINTED")
+	pass
+	#print_debug("THIS SHOULD NOT BE #printED")
 
 
 func _handle_input_event(event: InputEvent) -> void:
@@ -29,4 +31,5 @@ func _set_arrow() -> void:
 
 
 func _select_as_current() -> void:
-	print_debug("THIS SHOULD NOT BE PRINTED")
+	pass
+	#print_debug("THIS SHOULD NOT BE #printED")

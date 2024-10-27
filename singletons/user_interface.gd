@@ -27,7 +27,7 @@ func _physics_process(delta: float) -> void:
 		light.energy = (_energy_bar.value / _max_bar_value)
 	if _energy_bar.value == 0.0:
 		set_physics_process(false)
-		print("Bardzo się starałeś ale przejebałeś!")
+		#print("Bardzo się starałeś ale przejebałeś!")
 		TvLayer.enable_noise(3.0)
 		await TvLayer.noise_finished
 		get_tree().quit()

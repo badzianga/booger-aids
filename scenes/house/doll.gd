@@ -4,7 +4,7 @@ extends Interactable
 
 # THIS SHOULD BE IN EVERY INTERACTABLE -------------------------------------------------------------
 func interact() -> void:
-	print("This should be printed just when player arrives to the doll")
+	#print("This should be #printed just when player arrives to the doll")
 	# TODO: collect, update diary and noise here
 	GlobalVariables.collect("doll")
 	await GlobalVariables.item_collected
@@ -17,7 +17,7 @@ func stop_interaction() -> void:
 
 
 func _select_as_current() -> void:
-	print("Selected doll as current potential interactable")
+	#print("Selected doll as current potential interactable")
 	GlobalVariables.set_deferred("current_interactable", self)
 
 

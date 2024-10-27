@@ -77,19 +77,19 @@ const descriptions := {
 		"text": "After putting the cassette in, I saw a strange man on a bicycle and woke up here."
 	},
 	"tut4": {
-		"text": "After putting the cassette in, I saw a strange man on a bicycle and woke up here."
-	},
-	"tut5": {
 		"text": "*LETS PLAY A GAME*"
 	},
+	"tut5": {
+		"text": "You will remember yourself and I will show you the way out."
+	},
 	"tut6": {
-		"text": "You remember yourself and I will show you the way out."
+		"text": "Click mouse to move around the floors and collect SEVEN items from your memories."
 	},
 	"tut7": {
-		"text": "Click mouse to move around the floors and collect items from your childhood."
+		"text": "Press ESCAPE to pause the game and read about your findings. They can change after some time..."
 	},
 	"tut8": {
-		"text": "And REMEMBER to turn up the TV, otherwise the game will run out. Look at the lights and you will know..."
+		"text": "And REMEMBER to charge the TV, otherwise the game will run out. Look at the lights and you will know..."
 	},
 }
 
@@ -107,15 +107,15 @@ func collect(collectable_name: String, scary: bool = false) -> void:
 		DialogSystem.display_dialog(collectable_name)
 	DialogSystem.wait_timer.start()
 	await DialogSystem.closed
-	print("Dialog window closed, noise goes brrr")
+	#print("Dialog window closed, noise goes brrr")
 	TvLayer.random_noise()
 	collected.append(collectable_name)
 	fuck_up_level += 1
-	print("Collected: ", collectable_name, ", fuck_up_level increased to ", fuck_up_level)
+	#print("Collected: ", collectable_name, ", fuck_up_level increased to ", fuck_up_level)
 	item_collected.emit()
 	if fuck_up_level == 7:
 		set_physics_process(false)
-		print("Bardzo się starałeś no i wygrałeś!")
+		#print("Bardzo się starałeś no i wygrałeś!")
 		Diary.set_process_input(false)
 		TvLayer.enable_noise(5.0)
 		var victory_screen := VictoryScreen.instantiate()

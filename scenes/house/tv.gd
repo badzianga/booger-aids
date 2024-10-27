@@ -20,7 +20,7 @@ func _physics_process(delta: float) -> void:
 
 # THIS SHOULD BE IN EVERY INTERACTABLE -------------------------------------------------------------
 func interact() -> void:
-	print("This should be printed just when player arrives to the TV")
+	#print("This should be #printed just when player arrives to the TV")
 	interacting = true
 	GlobalVariables.player.stop()
 
@@ -30,7 +30,7 @@ func stop_interaction() -> void:
 
 
 func _select_as_current() -> void:
-	print("Selected TV as current potential interactable")
+	#print("Selected TV as current potential interactable")
 	GlobalVariables.set_deferred("current_interactable", self)
 
 

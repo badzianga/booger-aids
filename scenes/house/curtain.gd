@@ -10,7 +10,7 @@ var interacted := false
 func interact() -> void:
 	if interacted:
 		return
-	print("This should be printed just when player arrives to the curtain")
+	#print("This should be #printed just when player arrives to the curtain")
 	interacted = true
 	set_deferred("monitoring", false)
 	set_deferred("monitorable", false)
@@ -24,7 +24,7 @@ func stop_interaction() -> void:
 
 
 func _select_as_current() -> void:
-	print("Selected curtain as current potential interactable")
+	#print("Selected curtain as current potential interactable")
 	GlobalVariables.set_deferred("current_interactable", self)
 
 
