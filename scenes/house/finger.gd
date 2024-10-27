@@ -14,6 +14,7 @@ func interact() -> void:
 	GlobalVariables.collect("finger")
 	await GlobalVariables.item_collected
 	jumpscare.activate_timer()
+	GlobalVariables.player.stop()
 	queue_free()
 
 

@@ -18,6 +18,7 @@ func _physics_process(delta: float) -> void:
 func interact() -> void:
 	print("This should be printed just when player arrives to the TV")
 	interacting = true
+	GlobalVariables.player.stop()
 
 
 func stop_interaction() -> void:

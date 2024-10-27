@@ -1,7 +1,7 @@
 class_name Portal
 extends Interactable
 
-@onready var _teleports_to := $TeleportsTo
+@onready var _teleports_to := $Node/TeleportsTo
 
 
 # THIS SHOULD BE IN EVERY INTERACTABLE -------------------------------------------------------------

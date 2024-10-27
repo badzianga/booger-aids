@@ -24,6 +24,3 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 value = 100.0
 show_percentage = false
-
-[node name="DirectionalLight" type="DirectionalLight2D" parent="."]
-blend_mode = 1

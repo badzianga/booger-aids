@@ -8,6 +8,7 @@ func interact() -> void:
 	# TODO: collect, update diary and noise here
 	GlobalVariables.collect("puppet")
 	await GlobalVariables.item_collected
+	GlobalVariables.player.stop()
 	queue_free()
 
 

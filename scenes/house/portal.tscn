@@ -7,9 +7,11 @@ collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_xpy2f")
 
-[node name="TeleportsTo" type="Marker2D" parent="."]
-
 [node name="CollisionShape" type="CollisionShape2D" parent="."]
+
+[node name="Node" type="Node" parent="."]
+
+[node name="TeleportsTo" type="Marker2D" parent="Node"]
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

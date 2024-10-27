@@ -16,6 +16,7 @@ func interact() -> void:
 	set_deferred("monitorable", false)
 	TvLayer.random_noise()
 	$Sprite.texture = SecondCurtain
+	GlobalVariables.player.stop()
 
 
 func stop_interaction() -> void:

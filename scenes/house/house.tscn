@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://d61nxx0wh2fi"]
+[gd_scene load_steps=62 format=3 uid="uid://d61nxx0wh2fi"]
 
 [ext_resource type="PackedScene" uid="uid://7ifmdiqbak0l" path="res://scenes/player/player.tscn" id="1_amm8k"]
 [ext_resource type="Texture2D" uid="uid://c4i1x641enyht" path="res://assets/home/room_blockout.png" id="1_w7r23"]
@@ -39,6 +39,7 @@
 [ext_resource type="PackedScene" uid="uid://bcbdgnxpbu0pe" path="res://scenes/house/curtain.tscn" id="26_xv37r"]
 [ext_resource type="PackedScene" uid="uid://b2n7r7kfodgy8" path="res://scenes/house/leg.tscn" id="27_gja5j"]
 [ext_resource type="Texture2D" uid="uid://tqteinhfpvj5" path="res://assets/home/pokoj_kukielek/kukielka1.png" id="27_quiil"]
+[ext_resource type="Texture2D" uid="uid://daj44wfso7qaw" path="res://assets/stitting_player.png" id="28_6noww"]
 [ext_resource type="Texture2D" uid="uid://c57k2fv8072h7" path="res://assets/home/pokoj_kukielek/kukielka2.png" id="28_h2eif"]
 [ext_resource type="Texture2D" uid="uid://bh1coiilvkai5" path="res://assets/home/pokoj_kukielek/kukielka3.png" id="29_7427q"]
 [ext_resource type="PackedScene" uid="uid://yu6im8cblcbh" path="res://scenes/void.tscn" id="31_71kdh"]
@@ -53,13 +54,13 @@ size = Vector2(1093.5, 594)
 size = Vector2(3692, 597)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5e1t6"]
-size = Vector2(272, 168)
+size = Vector2(122, 168)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hjuw7"]
 size = Vector2(6299, 579)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rsmh4"]
-size = Vector2(234, 250)
+size = Vector2(162, 250)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_41l8l"]
 
@@ -87,6 +88,9 @@ turbulence_enabled = true
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0trm"]
 size = Vector2(5037, 585)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jspj7"]
+size = Vector2(122, 162)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_el7xp"]
 size = Vector2(2450, 582)
 
@@ -94,6 +98,9 @@ size = Vector2(2450, 582)
 size = Vector2(336, 368)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_6afch"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwkdm"]
+size = Vector2(120, 170)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_lrghs"]
 
@@ -144,12 +151,12 @@ script = ExtResource("2_qfp4q")
 [node name="StairsDown" parent="Rooms/GrandpaHall" instance=ExtResource("5_2ikdw")]
 position = Vector2(110, 369)
 
-[node name="TeleportsTo" parent="Rooms/GrandpaHall/StairsDown" index="0"]
-position = Vector2(72, 736)
-
-[node name="CollisionShape" parent="Rooms/GrandpaHall/StairsDown" index="1"]
-position = Vector2(136, 84)
+[node name="CollisionShape" parent="Rooms/GrandpaHall/StairsDown" index="0"]
+position = Vector2(211, 84)
 shape = SubResource("RectangleShape2D_5e1t6")
+
+[node name="TeleportsTo" parent="Rooms/GrandpaHall/StairsDown/Node" index="0"]
+position = Vector2(5680, 1320)
 
 [node name="Kitchen" type="Area2D" parent="Rooms"]
 position = Vector2(6780, 216)
@@ -196,14 +203,14 @@ position = Vector2(1604, 951)
 script = ExtResource("2_qfp4q")
 
 [node name="StairsDown" parent="Rooms/WindowsRoom" instance=ExtResource("5_2ikdw")]
-position = Vector2(132, 369)
+position = Vector2(51, 377)
 
-[node name="TeleportsTo" parent="Rooms/WindowsRoom/StairsDown" index="0"]
-position = Vector2(880, 760)
-
-[node name="CollisionShape" parent="Rooms/WindowsRoom/StairsDown" index="1"]
+[node name="CollisionShape" parent="Rooms/WindowsRoom/StairsDown" index="0"]
 position = Vector2(136, 84)
 shape = SubResource("RectangleShape2D_5e1t6")
+
+[node name="TeleportsTo" parent="Rooms/WindowsRoom/StairsDown/Node" index="0"]
+position = Vector2(2608, 2072)
 
 [node name="CollisionShape" type="CollisionShape2D" parent="Rooms/WindowsRoom"]
 position = Vector2(3181.5, 299.5)
@@ -316,12 +323,12 @@ script = ExtResource("2_qfp4q")
 [node name="StairsUp" parent="Rooms/StairsGroundFloor" instance=ExtResource("5_2ikdw")]
 position = Vector2(252, 303)
 
-[node name="TeleportsTo" parent="Rooms/StairsGroundFloor/StairsUp" index="0"]
-position = Vector2(200, -672)
-
-[node name="CollisionShape" parent="Rooms/StairsGroundFloor/StairsUp" index="1"]
-position = Vector2(107, 115)
+[node name="CollisionShape" parent="Rooms/StairsGroundFloor/StairsUp" index="0"]
+position = Vector2(71, 115)
 shape = SubResource("RectangleShape2D_rsmh4")
+
+[node name="TeleportsTo" parent="Rooms/StairsGroundFloor/StairsUp/Node" index="0"]
+position = Vector2(5928, 576)
 
 [node name="ObrazDziadka" type="Sprite2D" parent="Rooms/StairsGroundFloor"]
 position = Vector2(148, 311)
@@ -366,6 +373,10 @@ position = Vector2(-24, 8)
 amount = 40
 process_material = SubResource("ParticleProcessMaterial_hxbis")
 
+[node name="StittingPlayer" type="Sprite2D" parent="Rooms/BathRoom"]
+position = Vector2(-1898, 446)
+texture = ExtResource("28_6noww")
+
 [node name="PlayRoom" type="Area2D" parent="Rooms"]
 position = Vector2(329, 1716)
 script = ExtResource("2_qfp4q")
@@ -381,6 +392,16 @@ position = Vector2(495, 484)
 position = Vector2(903, 468)
 texture = ExtResource("22_iif5k")
 
+[node name="Portal" parent="Rooms/PlayRoom" instance=ExtResource("5_2ikdw")]
+position = Vector2(95, 372)
+
+[node name="CollisionShape" parent="Rooms/PlayRoom/Portal" index="0"]
+position = Vector2(51, 71)
+shape = SubResource("RectangleShape2D_jspj7")
+
+[node name="TeleportsTo" parent="Rooms/PlayRoom/Portal/Node" index="0"]
+position = Vector2(2600, 2832)
+
 [node name="StairsMinusOne" type="Area2D" parent="Rooms"]
 position = Vector2(1618, 1712)
 script = ExtResource("2_qfp4q")
@@ -388,22 +409,22 @@ script = ExtResource("2_qfp4q")
 [node name="StairsUp" parent="Rooms/StairsMinusOne" instance=ExtResource("5_2ikdw")]
 position = Vector2(718, 296)
 
-[node name="TeleportsTo" parent="Rooms/StairsMinusOne/StairsUp" index="0"]
-position = Vector2(-672, -688)
-
-[node name="CollisionShape" parent="Rooms/StairsMinusOne/StairsUp" index="1"]
-position = Vector2(107, 115)
+[node name="CollisionShape" parent="Rooms/StairsMinusOne/StairsUp" index="0"]
+position = Vector2(138, 113)
 shape = SubResource("RectangleShape2D_rsmh4")
+
+[node name="TeleportsTo" parent="Rooms/StairsMinusOne/StairsUp/Node" index="0"]
+position = Vector2(1680, 1312)
 
 [node name="StairsDown" parent="Rooms/StairsMinusOne" instance=ExtResource("5_2ikdw")]
 position = Vector2(78, 368)
 
-[node name="TeleportsTo" parent="Rooms/StairsMinusOne/StairsDown" index="0"]
-position = Vector2(904, 760)
-
-[node name="CollisionShape" parent="Rooms/StairsMinusOne/StairsDown" index="1"]
-position = Vector2(136, 84)
+[node name="CollisionShape" parent="Rooms/StairsMinusOne/StairsDown" index="0"]
+position = Vector2(62, 77)
 shape = SubResource("RectangleShape2D_5e1t6")
+
+[node name="TeleportsTo" parent="Rooms/StairsMinusOne/StairsDown/Node" index="0"]
+position = Vector2(2600, 2832)
 
 [node name="GalleryRoom" type="Area2D" parent="Rooms"]
 position = Vector2(2912, 1713)
@@ -450,14 +471,14 @@ position = Vector2(1603, 2472)
 script = ExtResource("2_qfp4q")
 
 [node name="StairsUp" parent="Rooms/PuppetRoom" instance=ExtResource("5_2ikdw")]
-position = Vector2(718, 296)
+position = Vector2(755, 293)
 
-[node name="TeleportsTo" parent="Rooms/PuppetRoom/StairsUp" index="0"]
-position = Vector2(-672, -688)
-
-[node name="CollisionShape" parent="Rooms/PuppetRoom/StairsUp" index="1"]
+[node name="CollisionShape" parent="Rooms/PuppetRoom/StairsUp" index="0"]
 position = Vector2(107, 115)
 shape = SubResource("RectangleShape2D_rsmh4")
+
+[node name="TeleportsTo" parent="Rooms/PuppetRoom/StairsUp/Node" index="0"]
+position = Vector2(360, 2072)
 
 [node name="Kukielka1" type="Sprite2D" parent="Rooms/PuppetRoom"]
 position = Vector2(141, 232)
@@ -511,76 +532,92 @@ position = Vector2(898, 315)
 rotation = 2.61799
 texture = ExtResource("7_wri3p")
 
+[node name="Portal" parent="Rooms/BathRoomV2" instance=ExtResource("5_2ikdw")]
+position = Vector2(252, 367)
+
+[node name="CollisionShape" parent="Rooms/BathRoomV2/Portal" index="0"]
+position = Vector2(60, 75)
+shape = SubResource("RectangleShape2D_uwkdm")
+
+[node name="TeleportsTo" parent="Rooms/BathRoomV2/Portal/Node" index="0"]
+position = Vector2(5928, 576)
+
 [node name="Columns" type="Node2D" parent="."]
 
 [node name="Column" type="Sprite2D" parent="Columns"]
 modulate = Color(0, 0, 0, 1)
 z_index = 1
-position = Vector2(5444, 527)
-scale = Vector2(94.0002, 646)
+position = Vector2(5444, 617)
+scale = Vector2(94.0002, 466)
 texture = SubResource("CanvasTexture_lrghs")
 
 [node name="Column2" type="Sprite2D" parent="Columns"]
 modulate = Color(0, 0, 0, 1)
 z_index = 1
-position = Vector2(6734, 501)
-scale = Vector2(94.0002, 646)
+position = Vector2(6734, 604)
+scale = Vector2(94.0002, 440)
 texture = SubResource("CanvasTexture_lrghs")
 
 [node name="Column3" type="Sprite2D" parent="Columns"]
 modulate = Color(0, 0, 0, 1)
 z_index = 1
-position = Vector2(2854, 1259)
-scale = Vector2(94.0002, 646)
+position = Vector2(2854, 1347)
+scale = Vector2(94.0002, 470)
 texture = SubResource("CanvasTexture_lrghs")
 
 [node name="Column4" type="Sprite2D" parent="Columns"]
 modulate = Color(0, 0, 0, 1)
 z_index = 1
-position = Vector2(4154, 1257)
-scale = Vector2(94.0002, 646)
+position = Vector2(4154, 1346)
+scale = Vector2(94.0002, 468)
 texture = SubResource("CanvasTexture_lrghs")
 
 [node name="Column5" type="Sprite2D" parent="Columns"]
 modulate = Color(0, 0, 0, 1)
 z_index = 1
-position = Vector2(5444, 1273)
-scale = Vector2(94.0002, 646)
+position = Vector2(5444, 1354)
+scale = Vector2(94.0002, 484)
 texture = SubResource("CanvasTexture_lrghs")
 
 [node name="Column6" type="Sprite2D" parent="Columns"]
 modulate = Color(0, 0, 0, 1)
 z_index = 1
-position = Vector2(6734, 1269)
-scale = Vector2(94.0002, 646)
+position = Vector2(6734, 1352)
+scale = Vector2(94.0002, 480)
 texture = SubResource("CanvasTexture_lrghs")
 
 [node name="Column7" type="Sprite2D" parent="Columns"]
 modulate = Color(0, 0, 0, 1)
 z_index = 1
-position = Vector2(1576, 2019)
-scale = Vector2(94.0002, 646)
+position = Vector2(1576, 2111)
+scale = Vector2(94.0002, 462)
 texture = SubResource("CanvasTexture_lrghs")
 
 [node name="Column8" type="Sprite2D" parent="Columns"]
 modulate = Color(0, 0, 0, 1)
 z_index = 1
-position = Vector2(2855, 2023)
-scale = Vector2(94.0002, 646)
+position = Vector2(2855, 2113)
+scale = Vector2(94.0002, 466)
 texture = SubResource("CanvasTexture_lrghs")
 
 [node name="Column9" type="Sprite2D" parent="Columns"]
 modulate = Color(0, 0, 0, 1)
 z_index = 1
-position = Vector2(2855, 2770)
-scale = Vector2(94.0002, 646)
+position = Vector2(2855, 2866.5)
+scale = Vector2(94.0002, 453)
 texture = SubResource("CanvasTexture_lrghs")
 
 [node name="Player" parent="." instance=ExtResource("1_amm8k")]
 position = Vector2(4688, 1320)
+speed = 800
 
 [node name="Camera" type="Camera2D" parent="Player"]
 offset = Vector2(0, -76)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(1, 1, 0.870588, 1)
+energy = 0.9
+blend_mode = 1
 
 [connection signal="mouse_entered" from="Rooms/BasicRoomTemplate" to="Rooms/BasicRoomTemplate" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Rooms/BasicRoomTemplate" to="Rooms/BasicRoomTemplate" method="_on_mouse_exited"]
@@ -616,6 +653,8 @@ offset = Vector2(0, -76)
 [editable path="Rooms/WindowsRoom/StairsDown"]
 [editable path="Rooms/StairsGroundFloor/StairsUp"]
 [editable path="Rooms/BathRoom/Finger"]
+[editable path="Rooms/PlayRoom/Portal"]
 [editable path="Rooms/StairsMinusOne/StairsUp"]
 [editable path="Rooms/StairsMinusOne/StairsDown"]
 [editable path="Rooms/PuppetRoom/StairsUp"]
+[editable path="Rooms/BathRoomV2/Portal"]

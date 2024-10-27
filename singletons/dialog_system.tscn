@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://beqqa8i26ccev"]
+[gd_scene load_steps=4 format=3 uid="uid://beqqa8i26ccev"]
 
 [ext_resource type="FontFile" uid="uid://bggd4r03ecgpu" path="res://assets/fonts/Horrors.ttf" id="1_8wrle"]
 [ext_resource type="Script" path="res://singletons/dialog_system.gd" id="1_mvhab"]
+[ext_resource type="Texture2D" uid="uid://bru5k3ecdy48" path="res://assets/dialog_box.png" id="2_7ek6f"]
 
 [node name="DialogSystem" type="CanvasLayer"]
 process_mode = 3
@@ -16,7 +17,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Box" type="ColorRect" parent="Control"]
+[node name="Box" type="TextureRect" parent="Control"]
 custom_minimum_size = Vector2(800, 200)
 layout_mode = 1
 anchors_preset = 8
@@ -30,7 +31,7 @@ offset_right = 400.0
 offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.25098, 0.25098, 0.25098, 0.784314)
+texture = ExtResource("2_7ek6f")
 
 [node name="Margin" type="MarginContainer" parent="Control/Box"]
 layout_mode = 1

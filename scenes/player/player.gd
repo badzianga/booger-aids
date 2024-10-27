@@ -44,6 +44,11 @@ func _physics_process(_delta: float) -> void:
 		animation_player.play("idle")
 
 
+func stop() -> void:
+	target = global_position
+	velocity = Vector2.ZERO
+
+
 func teleport_to(target_position: Vector2) -> void:
 	target = target_position
 	velocity = Vector2.ZERO
