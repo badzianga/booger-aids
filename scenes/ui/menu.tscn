@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4gyd0iiniakr"]
+
+[ext_resource type="Texture2D" uid="uid://bpndjllhdi6s1" path="res://assets/bede_gral_w_gre.png" id="1_54mgq"]
+[ext_resource type="Texture2D" uid="uid://brkhq1lke4spg" path="res://assets/ui/TV_Screen.png" id="2_e8o2r"]
+[ext_resource type="Script" path="res://scenes/ui/menu.gd" id="2_ufeqr"]
+[ext_resource type="FontFile" uid="uid://bggd4r03ecgpu" path="res://assets/fonts/Horrors.ttf" id="3_giurw"]
+
+[node name="Menu" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_54mgq")
+script = ExtResource("2_ufeqr")
+
+[node name="TV" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_e8o2r")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 141.0
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.588235, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_giurw")
+theme_override_font_sizes/font_size = 76
+text = "PLEASE STAND BY (ME)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 965.0
+offset_top = 669.0
+offset_right = 1271.0
+offset_bottom = 710.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("3_giurw")
+theme_override_font_sizes/font_size = 40
+text = "BY DOUBLE TROUBLE"
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 320.0
+offset_right = 923.0
+offset_bottom = 389.0
+theme_override_fonts/font = ExtResource("3_giurw")
+theme_override_font_sizes/font_size = 60
+text = "PLAY"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

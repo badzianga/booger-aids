@@ -47,7 +47,7 @@ const descriptions := {
 	},
 	"doll_fuck": {
 		"name": "Not-Anymore-Eyeless doll",
-		"text": "This old man destroyed your precious treasure. So you destroyed him to ger your treasure a new eyes.",
+		"text": "This old man destroyed your precious treasure. So you destroyed him to get your treasure a new eyes.",
 	},
 	"finger": {
 		"name": "Severed finger",
@@ -65,6 +65,9 @@ const descriptions := {
 		"name": "The Big Human Goulash",
 		"text": "This huge hole in the ground contains a culinary masterpiece with very unique meat.",
 	},
+	"tut1": {
+		"text": "Browar"
+	}
 }
 
 var collected: Array[String] = []

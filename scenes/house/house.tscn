@@ -1,6 +1,7 @@
-[gd_scene load_steps=74 format=3 uid="uid://d61nxx0wh2fi"]
+[gd_scene load_steps=75 format=3 uid="uid://d61nxx0wh2fi"]
 
 [ext_resource type="PackedScene" uid="uid://7ifmdiqbak0l" path="res://scenes/player/player.tscn" id="1_amm8k"]
+[ext_resource type="Script" path="res://scenes/house/house.gd" id="1_lvvlh"]
 [ext_resource type="Texture2D" uid="uid://c4i1x641enyht" path="res://assets/home/room_blockout.png" id="1_w7r23"]
 [ext_resource type="Texture2D" uid="uid://c62j5rek1kxrs" path="res://assets/home/windows_xp.png" id="2_6g3tv"]
 [ext_resource type="Script" path="res://scenes/house/room.gd" id="2_qfp4q"]
@@ -139,6 +140,7 @@ size = Vector2(120, 170)
 [sub_resource type="CanvasTexture" id="CanvasTexture_lrghs"]
 
 [node name="House" type="Node2D"]
+script = ExtResource("1_lvvlh")
 
 [node name="VoidBackground" type="CanvasLayer" parent="."]
 layer = -1

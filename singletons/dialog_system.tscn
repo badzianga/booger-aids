@@ -62,6 +62,7 @@ text = "[center]booger aids[/center]"
 fit_content = true
 
 [node name="WaitTimerBecauseIHaveStupid" type="Timer" parent="."]
+wait_time = 0.5
 one_shot = true
 
 [node name="Whispering" type="AudioStreamPlayer" parent="."]
