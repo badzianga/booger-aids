@@ -115,3 +115,28 @@ custom_minimum_size = Vector2(410, 0)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/CenterContainer/Panel/MarginContainer/GridContainer/Description"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Control/CenterContainer/Panel/MarginContainer/GridContainer/Description/CenterContainer"]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.490196, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_l6v8v")
+theme_override_font_sizes/font_size = 36
+text = "TEXT TO DISPLAY"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="custom_mouse_entered" from="Control/CenterContainer/Panel/MarginContainer/GridContainer/Entries/casette" to="." method="_on_custom_mouse_entered"]
+[connection signal="custom_mouse_entered" from="Control/CenterContainer/Panel/MarginContainer/GridContainer/Entries/wig" to="." method="_on_custom_mouse_entered"]
+[connection signal="custom_mouse_entered" from="Control/CenterContainer/Panel/MarginContainer/GridContainer/Entries/finger" to="." method="_on_custom_mouse_entered"]
+[connection signal="custom_mouse_entered" from="Control/CenterContainer/Panel/MarginContainer/GridContainer/Entries/stew" to="." method="_on_custom_mouse_entered"]
+[connection signal="custom_mouse_entered" from="Control/CenterContainer/Panel/MarginContainer/GridContainer/Entries/leg" to="." method="_on_custom_mouse_entered"]
+[connection signal="custom_mouse_entered" from="Control/CenterContainer/Panel/MarginContainer/GridContainer/Entries/puppet" to="." method="_on_custom_mouse_entered"]
+[connection signal="custom_mouse_entered" from="Control/CenterContainer/Panel/MarginContainer/GridContainer/Entries/doll" to="." method="_on_custom_mouse_entered"]

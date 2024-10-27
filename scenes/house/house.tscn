@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://d61nxx0wh2fi"]
+[gd_scene load_steps=73 format=3 uid="uid://d61nxx0wh2fi"]
 
 [ext_resource type="PackedScene" uid="uid://7ifmdiqbak0l" path="res://scenes/player/player.tscn" id="1_amm8k"]
 [ext_resource type="Texture2D" uid="uid://c4i1x641enyht" path="res://assets/home/room_blockout.png" id="1_w7r23"]
@@ -60,6 +60,31 @@ size = Vector2(1093.5, 594)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c7xw3"]
 size = Vector2(3692, 597)
+
+[sub_resource type="Curve" id="Curve_l5w4u"]
+_data = [Vector2(0.0178571, 0.978022), 0.0, 0.0, 0, 0, Vector2(0.745536, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_oly8u"]
+curve = SubResource("Curve_l5w4u")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rawjb"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(150, 16, 1)
+angle_min = 1.07288e-05
+angle_max = 360.0
+angular_velocity_min = -1.60933e-05
+angular_velocity_max = 45.0
+orbit_velocity_min = 9.49949e-08
+orbit_velocity_max = 9.49949e-08
+radial_velocity_min = -2.23517e-05
+radial_velocity_max = 30.0
+gravity = Vector3(0, -98, 0)
+scale_max = 4.0
+color = Color(0, 1, 0, 1)
+alpha_curve = SubResource("CurveTexture_oly8u")
+turbulence_enabled = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5e1t6"]
 size = Vector2(122, 168)
@@ -149,8 +174,14 @@ shape = SubResource("RectangleShape2D_c7xw3")
 position = Vector2(583, 446)
 texture = ExtResource("4_1c2of")
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Rooms/GrandpaRoom/BigStew"]
+position = Vector2(-120, 104)
+amount = 150
+process_material = SubResource("ParticleProcessMaterial_rawjb")
+lifetime = 5.0
+
 [node name="Stew" parent="Rooms/GrandpaRoom" instance=ExtResource("4_axqvy")]
-position = Vector2(583, 454)
+position = Vector2(471, 454)
 
 [node name="GrandpaHall" type="Area2D" parent="Rooms"]
 position = Vector2(5490, 215)

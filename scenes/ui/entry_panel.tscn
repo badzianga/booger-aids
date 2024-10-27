@@ -5,6 +5,14 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0dtfd"]
 bg_color = Color(0.627451, 0.627451, 0.627451, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [node name="EntryPanel" type="Panel"]
 custom_minimum_size = Vector2(100, 32)
@@ -25,3 +33,6 @@ theme_override_font_sizes/font_size = 20
 text = "Label"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
