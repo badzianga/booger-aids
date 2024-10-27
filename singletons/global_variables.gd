@@ -2,6 +2,8 @@ extends Node
 
 signal item_collected
 
+const VictoryScreen := preload("res://scenes/ui/victory_screen.tscn")
+
 const fuck_ups_for_descriptions := {
 	"casette": 3,
 	"wig": 3,
@@ -95,6 +97,7 @@ var collected: Array[String] = []
 var can_noise := true
 var lights: Array[Light2D] = []
 
+
 func collect(collectable_name: String, scary: bool = false) -> void:
 	if collectable_name in collected:
 		return
@@ -110,6 +113,14 @@ func collect(collectable_name: String, scary: bool = false) -> void:
 	fuck_up_level += 1
 	print("Collected: ", collectable_name, ", fuck_up_level increased to ", fuck_up_level)
 	item_collected.emit()
+	if fuck_up_level == 7:
+		set_physics_process(false)
+		print("Bardzo się starałeś no i wygrałeś!")
+		TvLayer.enable_noise(5.0)
+		var victory_screen := VictoryScreen.instantiate()
+		get_tree().root.add_child(victory_screen)
+		await TvLayer.noise_finished
+		get_tree().quit()
 
 var current_interactable: Interactable = null
 var fuck_up_level := 0  # a.k.a. collectibles found
