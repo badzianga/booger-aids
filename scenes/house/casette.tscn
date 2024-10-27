@@ -1,10 +1,50 @@
-[gd_scene load_steps=4 format=3 uid="uid://cv7yqgblyg48o"]
+[gd_scene load_steps=8 format=3 uid="uid://cv7yqgblyg48o"]
 
 [ext_resource type="Script" path="res://scenes/house/casette.gd" id="1_h8lgn"]
 [ext_resource type="Texture2D" uid="uid://cjerlsm3vuhsk" path="res://assets/home/kaseta.png" id="2_wll4q"]
+[ext_resource type="Texture2D" uid="uid://dxrqe3gcwfw1j" path="res://assets/mouse/arrow.png" id="3_kqxoi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgi2k"]
 size = Vector2(52, 26)
+
+[sub_resource type="Animation" id="Animation_4ai4l"]
+resource_name = "moving"
+length = 0.5
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -200), Vector2(0, -160), Vector2(0, -200)]
+}
+
+[sub_resource type="Animation" id="Animation_aqi2k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -200)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_im2lv"]
+_data = {
+"RESET": SubResource("Animation_aqi2k"),
+"moving": SubResource("Animation_4ai4l")
+}
 
 [node name="Casette" type="Area2D"]
 collision_layer = 2
@@ -16,6 +56,18 @@ texture = ExtResource("2_wll4q")
 
 [node name="CollisionShape" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_hgi2k")
+
+[node name="Arrow" type="Sprite2D" parent="."]
+position = Vector2(0, -200)
+rotation = -2.35619
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_kqxoi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Arrow"]
+libraries = {
+"": SubResource("AnimationLibrary_im2lv")
+}
+autoplay = "moving"
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
