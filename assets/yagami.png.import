@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpakxfgpqqt2k"
-path="res://.godot/imported/obraz9.png-a88b43989d428656016c1de47ff3fa66.ctex"
+uid="uid://b1kufj8bk8mgr"
+path="res://.godot/imported/yagami.png-2d0fe02943c7245a9c37c6c39c946ca0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/home/obrazy_krita/obraz9.png"
-dest_files=["res://.godot/imported/obraz9.png-a88b43989d428656016c1de47ff3fa66.ctex"]
+source_file="res://assets/yagami.png"
+dest_files=["res://.godot/imported/yagami.png-2d0fe02943c7245a9c37c6c39c946ca0.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cre1qein50nxo"
-path="res://.godot/imported/obraz10.png-c5cbe6661c0a2ed60166c8677a396970.ctex"
+path="res://.godot/imported/obraz10.png-630d7c689fb9d2ac322f8a97f9afb22e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/home/obrazy_krita/obraz10.png"
-dest_files=["res://.godot/imported/obraz10.png-c5cbe6661c0a2ed60166c8677a396970.ctex"]
+source_file="res://assets/home/pokoj_obrazow/obraz10.png"
+dest_files=["res://.godot/imported/obraz10.png-630d7c689fb9d2ac322f8a97f9afb22e.ctex"]
 
 [params]
 

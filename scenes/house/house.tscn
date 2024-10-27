@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://d61nxx0wh2fi"]
+[gd_scene load_steps=70 format=3 uid="uid://d61nxx0wh2fi"]
 
 [ext_resource type="PackedScene" uid="uid://7ifmdiqbak0l" path="res://scenes/player/player.tscn" id="1_amm8k"]
 [ext_resource type="Texture2D" uid="uid://c4i1x641enyht" path="res://assets/home/room_blockout.png" id="1_w7r23"]
@@ -45,6 +45,14 @@
 [ext_resource type="PackedScene" uid="uid://yu6im8cblcbh" path="res://scenes/void.tscn" id="31_71kdh"]
 [ext_resource type="PackedScene" uid="uid://c7f0oskxfjunq" path="res://scenes/house/puppet.tscn" id="31_j2gbp"]
 [ext_resource type="PackedScene" uid="uid://dkoaie7bifo41" path="res://scenes/house/spooky_arm.tscn" id="43_w7f1i"]
+[ext_resource type="Texture2D" uid="uid://bpakxfgpqqt2k" path="res://assets/home/pokoj_obrazow/obraz9.png" id="46_m3bc4"]
+[ext_resource type="Texture2D" uid="uid://cre1qein50nxo" path="res://assets/home/pokoj_obrazow/obraz10.png" id="47_6dq45"]
+[ext_resource type="Texture2D" uid="uid://5ux3rjailsii" path="res://assets/home/pokoj_obrazow/obraz11.png" id="48_cq3ou"]
+[ext_resource type="Texture2D" uid="uid://baaw0v14ngjyl" path="res://assets/home/pokoj_obrazow/obraz12.png" id="49_r0mbf"]
+[ext_resource type="Texture2D" uid="uid://y0rof1t4ocvo" path="res://assets/home/pokoj_obrazow/obraz10_2.png" id="50_5xebi"]
+[ext_resource type="Texture2D" uid="uid://cnud8tm1ff0o4" path="res://assets/home/pokoj_obrazow/obraz11_2.png" id="51_y8wl2"]
+[ext_resource type="Texture2D" uid="uid://b6ob1254ip6xm" path="res://assets/home/pokoj_obrazow/obraz12_2.png" id="52_w0yuu"]
+[ext_resource type="Texture2D" uid="uid://bkgdmn0q22fkp" path="res://assets/home/pokoj_obrazow/obraz6_2.png" id="53_fpm8n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m1w75"]
 resource_local_to_scene = true
@@ -463,8 +471,45 @@ texture = ExtResource("24_aata7")
 position = Vector2(1520, 199)
 texture = ExtResource("25_lo5mf")
 
-[node name="Leg" parent="Rooms/GalleryRoom" instance=ExtResource("27_gja5j")]
+[node name="Leg" parent="Rooms/GalleryRoom" node_paths=PackedStringArray("to_update") instance=ExtResource("27_gja5j")]
 position = Vector2(1623, 388)
+to_update = [NodePath("../Obraz6_2"), NodePath("../Obraz10_2"), NodePath("../Obraz11_2"), NodePath("../Obraz12_2")]
+
+[node name="Obraz10" type="Sprite2D" parent="Rooms/GalleryRoom"]
+position = Vector2(1211, 400.5)
+texture = ExtResource("47_6dq45")
+
+[node name="Obraz11" type="Sprite2D" parent="Rooms/GalleryRoom"]
+position = Vector2(1752, 279)
+texture = ExtResource("48_cq3ou")
+
+[node name="Obraz12" type="Sprite2D" parent="Rooms/GalleryRoom"]
+position = Vector2(1989.5, 380.5)
+texture = ExtResource("49_r0mbf")
+
+[node name="Obraz9" type="Sprite2D" parent="Rooms/GalleryRoom"]
+position = Vector2(2192, 247)
+texture = ExtResource("46_m3bc4")
+
+[node name="Obraz6_2" type="Sprite2D" parent="Rooms/GalleryRoom"]
+visible = false
+position = Vector2(1016, 239)
+texture = ExtResource("53_fpm8n")
+
+[node name="Obraz10_2" type="Sprite2D" parent="Rooms/GalleryRoom"]
+visible = false
+position = Vector2(1211, 400.5)
+texture = ExtResource("50_5xebi")
+
+[node name="Obraz11_2" type="Sprite2D" parent="Rooms/GalleryRoom"]
+visible = false
+position = Vector2(1752, 279)
+texture = ExtResource("51_y8wl2")
+
+[node name="Obraz12_2" type="Sprite2D" parent="Rooms/GalleryRoom"]
+visible = false
+position = Vector2(1989.5, 380.5)
+texture = ExtResource("52_w0yuu")
 
 [node name="PuppetRoom" type="Area2D" parent="Rooms"]
 position = Vector2(1603, 2472)
@@ -615,6 +660,7 @@ speed = 800
 offset = Vector2(0, -76)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+visible = false
 color = Color(1, 1, 0.870588, 1)
 energy = 0.9
 blend_mode = 1

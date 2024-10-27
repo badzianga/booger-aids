@@ -1,6 +1,8 @@
 class_name Leg
 extends Interactable
 
+@export var to_update: Array[Sprite2D] = []
+
 
 # THIS SHOULD BE IN EVERY INTERACTABLE -------------------------------------------------------------
 func interact() -> void:
@@ -9,6 +11,8 @@ func interact() -> void:
 	GlobalVariables.collect("leg", true)
 	await GlobalVariables.item_collected
 	GlobalVariables.player.stop()
+	for sprite in to_update:
+		sprite.visible = true
 	queue_free()
 
 

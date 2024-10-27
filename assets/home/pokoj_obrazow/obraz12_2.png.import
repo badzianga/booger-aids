@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://baaw0v14ngjyl"
-path="res://.godot/imported/obraz12.png-70bc229e56653efb26659e3aadd4c6fd.ctex"
+uid="uid://b6ob1254ip6xm"
+path="res://.godot/imported/obraz12_2.png-b2b76c7eea5e2c3e7341f645231e0b72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/home/obrazy_krita/obraz12.png"
-dest_files=["res://.godot/imported/obraz12.png-70bc229e56653efb26659e3aadd4c6fd.ctex"]
+source_file="res://assets/home/pokoj_obrazow/obraz12_2.png"
+dest_files=["res://.godot/imported/obraz12_2.png-b2b76c7eea5e2c3e7341f645231e0b72.ctex"]
 
 [params]
 
