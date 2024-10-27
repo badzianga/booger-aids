@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://d61nxx0wh2fi"]
+[gd_scene load_steps=55 format=3 uid="uid://d61nxx0wh2fi"]
 
 [ext_resource type="PackedScene" uid="uid://7ifmdiqbak0l" path="res://scenes/player/player.tscn" id="1_amm8k"]
 [ext_resource type="Texture2D" uid="uid://c4i1x641enyht" path="res://assets/home/room_blockout.png" id="1_w7r23"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://bf4cfhoo43e8v" path="res://assets/home/lazienka1/the-scariest-jumpscare.jpg" id="10_ua66d"]
 [ext_resource type="PackedScene" uid="uid://b4uetbwx3sqtx" path="res://scenes/house/kwiatek.tscn" id="10_xj80s"]
 [ext_resource type="Texture2D" uid="uid://drd3xf1r8064k" path="res://assets/home/przedpokoj1/obraz_dziadka.png" id="12_5c06y"]
+[ext_resource type="Script" path="res://scenes/house/windows.gd" id="12_otima"]
 [ext_resource type="PackedScene" uid="uid://cv7yqgblyg48o" path="res://scenes/house/casette.tscn" id="13_2jgoc"]
 [ext_resource type="Texture2D" uid="uid://drc37qxf4f8qw" path="res://assets/home/pokoj_obrazow/obraz1.png" id="18_6j8k0"]
 [ext_resource type="Texture2D" uid="uid://dljewcltvceqv" path="res://assets/home/pokoj_obrazow/obraz2.png" id="19_h5ipy"]
@@ -152,6 +153,14 @@ position = Vector2(797, 52.5)
 rotation = 3.14159
 texture = ExtResource("8_sfk5m")
 
+[node name="WindowsXp" type="Sprite2D" parent="Rooms/Kitchen"]
+position = Vector2(356, 352)
+texture = ExtResource("2_6g3tv")
+
+[node name="WindowsXp2" type="Sprite2D" parent="Rooms/Kitchen"]
+position = Vector2(860, 352)
+texture = ExtResource("2_6g3tv")
+
 [node name="Kwiatek" parent="Rooms/Kitchen" instance=ExtResource("10_xj80s")]
 
 [node name="First" parent="Rooms/Kitchen/Kwiatek/Node" index="0"]
@@ -177,6 +186,61 @@ shape = SubResource("RectangleShape2D_5e1t6")
 [node name="CollisionShape" type="CollisionShape2D" parent="Rooms/WindowsRoom"]
 position = Vector2(3181.5, 299.5)
 shape = SubResource("RectangleShape2D_hjuw7")
+
+[node name="Windows" type="Node2D" parent="Rooms/WindowsRoom"]
+script = ExtResource("12_otima")
+
+[node name="WindowsXp" type="Sprite2D" parent="Rooms/WindowsRoom/Windows"]
+position = Vector2(500, 177)
+texture = ExtResource("2_6g3tv")
+
+[node name="WindowsXp2" type="Sprite2D" parent="Rooms/WindowsRoom/Windows"]
+position = Vector2(580, 289)
+texture = ExtResource("2_6g3tv")
+
+[node name="WindowsXp3" type="Sprite2D" parent="Rooms/WindowsRoom/Windows"]
+position = Vector2(540, 401)
+texture = ExtResource("2_6g3tv")
+
+[node name="WindowsXp4" type="Sprite2D" parent="Rooms/WindowsRoom/Windows"]
+position = Vector2(732, 417)
+texture = ExtResource("2_6g3tv")
+
+[node name="WindowsXp5" type="Sprite2D" parent="Rooms/WindowsRoom/Windows"]
+position = Vector2(724, 201)
+texture = ExtResource("2_6g3tv")
+
+[node name="WindowsXp6" type="Sprite2D" parent="Rooms/WindowsRoom/Windows"]
+position = Vector2(692, 353)
+texture = ExtResource("2_6g3tv")
+
+[node name="WindowsXp7" type="Sprite2D" parent="Rooms/WindowsRoom/Windows"]
+position = Vector2(876, 145)
+texture = ExtResource("2_6g3tv")
+
+[node name="WindowsXp8" type="Sprite2D" parent="Rooms/WindowsRoom/Windows"]
+position = Vector2(980, 193)
+texture = ExtResource("2_6g3tv")
+
+[node name="WindowsXp9" type="Sprite2D" parent="Rooms/WindowsRoom/Windows"]
+position = Vector2(324, 241)
+texture = ExtResource("2_6g3tv")
+
+[node name="WindowsXp10" type="Sprite2D" parent="Rooms/WindowsRoom/Windows"]
+position = Vector2(948, 409)
+texture = ExtResource("2_6g3tv")
+
+[node name="WindowsXp11" type="Sprite2D" parent="Rooms/WindowsRoom/Windows"]
+position = Vector2(812, 289)
+texture = ExtResource("2_6g3tv")
+
+[node name="WindowsXp12" type="Sprite2D" parent="Rooms/WindowsRoom/Windows"]
+position = Vector2(812, 289)
+texture = ExtResource("2_6g3tv")
+
+[node name="WindowsXp13" type="Sprite2D" parent="Rooms/WindowsRoom/Windows"]
+position = Vector2(156, 185)
+texture = ExtResource("2_6g3tv")
 
 [node name="GrandmaRoom" type="Area2D" parent="Rooms"]
 position = Vector2(2907, 950)
