@@ -16,6 +16,7 @@ func _input(event: InputEvent) -> void:
 		visible = paused
 		if paused:
 			update_entries()
+		GlobalVariables.can_noise = not paused
 
 
 func update_entries() -> void:

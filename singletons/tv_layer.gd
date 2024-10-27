@@ -15,10 +15,15 @@ func _physics_process(delta: float) -> void:
 	funny_noise.position.y += delta * 400
 	if funny_noise.position.y >= 1000:
 		funny_noise.position.y = -250
+	if GlobalVariables.can_noise:
+		if randi_range(0, 1000) == 0:
+			_static_noise.playing = true
+			_white.visible = true
+			_timer.start(randf_range(0.1, 0.3))
 
 
 func random_noise() -> void:
-	enable_noise(randf_range(0.2, 0.5))
+	enable_noise(randf_range(0.3, 0.6))
 
 
 func enable_noise(time: float) -> void:

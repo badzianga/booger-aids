@@ -72,6 +72,7 @@ const descriptions := {
 }
 
 var collected: Array[String] = []
+var can_noise := true
 
 func collect(collectable_name: String, scary: bool = false) -> void:
 	if collectable_name in collected:

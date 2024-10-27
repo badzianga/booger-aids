@@ -22,6 +22,7 @@ func _input(event: InputEvent) -> void:
 	get_tree().paused = false
 	print("And now dialog is hidden. Bruh!")
 	closed.emit()
+	GlobalVariables.can_noise = true
 
 
 func display_dialog(id: String) -> void:
@@ -29,9 +30,11 @@ func display_dialog(id: String) -> void:
 	_text_label.bbcode_text = &"[center]" + GlobalVariables.descriptions[id]["text"] + &"[/center]"
 	get_tree().paused = true
 	print("Dialog ", id, " displayed")
+	GlobalVariables.can_noise = false
 
 func display_dialog_cursed(id: String) -> void:
 	visible = true
 	_text_label.bbcode_text = &"[center][color=#b40000]" + GlobalVariables.descriptions[id + "_fuck"]["text"] + &"[/color][/center]"
 	get_tree().paused = true
 	print("Dialog ", id, " displayed")
+	GlobalVariables.can_noise = false
