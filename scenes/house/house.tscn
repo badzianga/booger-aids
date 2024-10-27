@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://d61nxx0wh2fi"]
+[gd_scene load_steps=42 format=3 uid="uid://d61nxx0wh2fi"]
 
 [ext_resource type="PackedScene" uid="uid://7ifmdiqbak0l" path="res://scenes/player/player.tscn" id="1_amm8k"]
 [ext_resource type="Texture2D" uid="uid://c4i1x641enyht" path="res://assets/home/room_blockout.png" id="1_w7r23"]
@@ -30,26 +30,45 @@
 [ext_resource type="Texture2D" uid="uid://tqteinhfpvj5" path="res://assets/home/pokoj_kukielek/kukielka1.png" id="27_quiil"]
 [ext_resource type="Texture2D" uid="uid://c57k2fv8072h7" path="res://assets/home/pokoj_kukielek/kukielka2.png" id="28_h2eif"]
 [ext_resource type="Texture2D" uid="uid://bh1coiilvkai5" path="res://assets/home/pokoj_kukielek/kukielka3.png" id="29_7427q"]
+[ext_resource type="PackedScene" uid="uid://yu6im8cblcbh" path="res://scenes/void.tscn" id="31_71kdh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m1w75"]
-size = Vector2(1209, 594)
+resource_local_to_scene = true
+size = Vector2(1093.5, 594)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c7xw3"]
+size = Vector2(3664, 597)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5e1t6"]
 size = Vector2(272, 168)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hjuw7"]
+size = Vector2(6299, 579)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rsmh4"]
 size = Vector2(234, 250)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_41l8l"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2ne1"]
-size = Vector2(2561, 594)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k0trm"]
+size = Vector2(5037, 585)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_el7xp"]
+size = Vector2(2450, 582)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_6afch"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_lrghs"]
 
 [node name="House" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Marker" type="Marker2D" parent="CanvasLayer"]
+position = Vector2(640, 360)
+
+[node name="Void" parent="CanvasLayer/Marker" instance=ExtResource("31_71kdh")]
 
 [node name="RoomLayout" type="Sprite2D" parent="."]
 texture = ExtResource("1_w7r23")
@@ -71,16 +90,12 @@ position = Vector2(4201, 218)
 script = ExtResource("2_qfp4q")
 
 [node name="CollisionShape" type="CollisionShape2D" parent="Rooms/GrandpaRoom"]
-position = Vector2(597.5, 297)
-shape = SubResource("RectangleShape2D_m1w75")
+position = Vector2(1899, 297.5)
+shape = SubResource("RectangleShape2D_c7xw3")
 
 [node name="GrandpaHall" type="Area2D" parent="Rooms"]
 position = Vector2(5490, 215)
 script = ExtResource("2_qfp4q")
-
-[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/GrandpaHall"]
-position = Vector2(597.5, 297)
-shape = SubResource("RectangleShape2D_m1w75")
 
 [node name="StairsDown" parent="Rooms/GrandpaHall" instance=ExtResource("5_2ikdw")]
 position = Vector2(110, 369)
@@ -96,17 +111,9 @@ shape = SubResource("RectangleShape2D_5e1t6")
 position = Vector2(6780, 216)
 script = ExtResource("2_qfp4q")
 
-[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/Kitchen"]
-position = Vector2(602.5, 297)
-shape = SubResource("RectangleShape2D_m1w75")
-
 [node name="WindowsRoom" type="Area2D" parent="Rooms"]
 position = Vector2(1604, 951)
 script = ExtResource("2_qfp4q")
-
-[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/WindowsRoom"]
-position = Vector2(597.5, 297)
-shape = SubResource("RectangleShape2D_m1w75")
 
 [node name="StairsDown" parent="Rooms/WindowsRoom" instance=ExtResource("5_2ikdw")]
 position = Vector2(132, 369)
@@ -118,13 +125,13 @@ position = Vector2(880, 760)
 position = Vector2(136, 84)
 shape = SubResource("RectangleShape2D_5e1t6")
 
+[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/WindowsRoom"]
+position = Vector2(3181.5, 299.5)
+shape = SubResource("RectangleShape2D_hjuw7")
+
 [node name="GrandmaRoom" type="Area2D" parent="Rooms"]
 position = Vector2(2907, 950)
 script = ExtResource("2_qfp4q")
-
-[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/GrandmaRoom"]
-position = Vector2(597.5, 297)
-shape = SubResource("RectangleShape2D_m1w75")
 
 [node name="Lozko" type="Sprite2D" parent="Rooms/GrandmaRoom"]
 position = Vector2(277, 442)
@@ -150,10 +157,6 @@ texture = ExtResource("8_a5k7h")
 position = Vector2(4203, 951)
 script = ExtResource("2_qfp4q")
 
-[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/LivingRoom"]
-position = Vector2(597.5, 297)
-shape = SubResource("RectangleShape2D_m1w75")
-
 [node name="WindowsXp" type="Sprite2D" parent="Rooms/LivingRoom"]
 position = Vector2(231, 295)
 texture = ExtResource("2_6g3tv")
@@ -173,10 +176,6 @@ texture = ExtResource("4_l41q1")
 position = Vector2(5492, 953)
 script = ExtResource("2_qfp4q")
 
-[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/StairsGroundFloor"]
-position = Vector2(597.5, 297)
-shape = SubResource("RectangleShape2D_m1w75")
-
 [node name="StairsUp" parent="Rooms/StairsGroundFloor" instance=ExtResource("5_2ikdw")]
 position = Vector2(252, 303)
 
@@ -194,10 +193,6 @@ texture = ExtResource("12_5c06y")
 [node name="BathRoom" type="Area2D" parent="Rooms"]
 position = Vector2(6784, 954)
 script = ExtResource("2_qfp4q")
-
-[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/BathRoom"]
-position = Vector2(597.5, 297)
-shape = SubResource("RectangleShape2D_m1w75")
 
 [node name="Wanna" type="Sprite2D" parent="Rooms/BathRoom"]
 position = Vector2(912, 486)
@@ -232,16 +227,12 @@ position = Vector2(329, 1716)
 script = ExtResource("2_qfp4q")
 
 [node name="CollisionShape" type="CollisionShape2D" parent="Rooms/PlayRoom"]
-position = Vector2(597.5, 297)
-shape = SubResource("RectangleShape2D_m1w75")
+position = Vector2(2563.5, 289.5)
+shape = SubResource("RectangleShape2D_k0trm")
 
 [node name="StairsMinusOne" type="Area2D" parent="Rooms"]
 position = Vector2(1618, 1712)
 script = ExtResource("2_qfp4q")
-
-[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/StairsMinusOne"]
-position = Vector2(597.5, 297)
-shape = SubResource("RectangleShape2D_m1w75")
 
 [node name="StairsUp" parent="Rooms/StairsMinusOne" instance=ExtResource("5_2ikdw")]
 position = Vector2(718, 296)
@@ -266,10 +257,6 @@ shape = SubResource("RectangleShape2D_5e1t6")
 [node name="GalleryRoom" type="Area2D" parent="Rooms"]
 position = Vector2(2912, 1713)
 script = ExtResource("2_qfp4q")
-
-[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/GalleryRoom"]
-position = Vector2(1256, 303)
-shape = SubResource("RectangleShape2D_w2ne1")
 
 [node name="Obraz1" type="Sprite2D" parent="Rooms/GalleryRoom"]
 position = Vector2(280, 247)
@@ -312,10 +299,6 @@ texture = ExtResource("26_8tfx1")
 position = Vector2(1603, 2472)
 script = ExtResource("2_qfp4q")
 
-[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/PuppetRoom"]
-position = Vector2(597.5, 297)
-shape = SubResource("RectangleShape2D_m1w75")
-
 [node name="StairsUp" parent="Rooms/PuppetRoom" instance=ExtResource("5_2ikdw")]
 position = Vector2(718, 296)
 
@@ -338,13 +321,13 @@ texture = ExtResource("28_h2eif")
 position = Vector2(450, 214)
 texture = ExtResource("29_7427q")
 
+[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/PuppetRoom"]
+position = Vector2(1247, 292)
+shape = SubResource("RectangleShape2D_el7xp")
+
 [node name="BathRoomV2" type="Area2D" parent="Rooms"]
 position = Vector2(2908, 2473)
 script = ExtResource("2_qfp4q")
-
-[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/BathRoomV2"]
-position = Vector2(599.5, 297)
-shape = SubResource("RectangleShape2D_m1w75")
 
 [node name="LustroBg" type="Sprite2D" parent="Rooms/BathRoomV2"]
 modulate = Color(0.752941, 0.752941, 0.752941, 1)
@@ -432,7 +415,7 @@ position = Vector2(4688, 1320)
 speed = 800
 
 [node name="Camera" type="Camera2D" parent="Player"]
-offset = Vector2(0, -70)
+offset = Vector2(0, -76)
 
 [connection signal="mouse_entered" from="Rooms/BasicRoomTemplate" to="Rooms/BasicRoomTemplate" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Rooms/BasicRoomTemplate" to="Rooms/BasicRoomTemplate" method="_on_mouse_exited"]
