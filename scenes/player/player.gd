@@ -11,6 +11,8 @@ var mouse_in_room := false  # set in room script
 @onready var sprite := $Sprite
 @onready var animation_player := $AnimationPlayer
 
+var autistic_case: Interactable = null
+
 
 func _ready() -> void:
 	GlobalVariables.player = self
@@ -41,6 +43,10 @@ func _physics_process(_delta: float) -> void:
 			sprite.flip_h = true
 		move_and_slide()
 	else:
+		if Input.is_action_just_pressed("click") and autistic_case != null:
+			autistic_case.interact()
+			GlobalVariables.current_interactable = null
+			#target.x = get_global_mouse_position().x
 		animation_player.play("idle")
 
 
@@ -56,6 +62,17 @@ func teleport_to(target_position: Vector2) -> void:
 
 
 func _on_interactable_area_area_entered(interactable: Interactable) -> void:
+	print("Autistic case will be ", interactable.name, " now")
 	if interactable == GlobalVariables.current_interactable:
 		print("Arrived to the object, so interaction can take place")
 		interactable.interact()
+	autistic_case = interactable
+
+
+func _on_interactable_area_area_exited(area: Interactable) -> void:
+	print("Autistic case was ", area.name, ", now it will be null")
+	if autistic_case == null:
+		return  # I don't know what I am doing here
+	autistic_case.stop_interaction()
+	if autistic_case.name == area.name:
+		autistic_case = null
