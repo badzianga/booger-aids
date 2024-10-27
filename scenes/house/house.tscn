@@ -105,7 +105,7 @@ size = Vector2(2450, 582)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_da2up"]
 size = Vector2(336, 368)
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_6afch"]
+[sub_resource type="CanvasTexture" id="CanvasTexture_thqny"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uwkdm"]
 size = Vector2(120, 170)
@@ -553,14 +553,13 @@ position = Vector2(2908, 2473)
 script = ExtResource("2_qfp4q")
 
 [node name="LustroBg" type="Sprite2D" parent="Rooms/BathRoomV2"]
-modulate = Color(0.752941, 0.752941, 0.752941, 1)
-position = Vector2(154.5, 283)
-scale = Vector2(96, 344)
-texture = SubResource("CanvasTexture_6afch")
+position = Vector2(152, 283)
+scale = Vector2(104, 376)
+texture = SubResource("CanvasTexture_thqny")
 
 [node name="Lustro" type="Sprite2D" parent="Rooms/BathRoomV2"]
-position = Vector2(154.5, 283)
-scale = Vector2(1, 2.37975)
+position = Vector2(152, 283.5)
+scale = Vector2(0.954128, 2.37342)
 texture = ExtResource("10_txvk8")
 
 [node name="SpookyArm" parent="Rooms/BathRoomV2" instance=ExtResource("43_w7f1i")]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://deo10nr3fb8cc"]
+
+[ext_resource type="Texture2D" uid="uid://drx55bk1ntwex" path="res://assets/home/lustro2.png" id="1_nbxnv"]
+[ext_resource type="Script" path="res://scenes/house/omori.gd" id="2_h8c20"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ad1rx"]
+size = Vector2(122, 186)
+
+[node name="Omori" type="Sprite2D"]
+texture = ExtResource("1_nbxnv")
+script = ExtResource("2_h8c20")
+
+[node name="SpookArea" type="Area2D" parent="."]
+
+[node name="CollisionShape" type="CollisionShape2D" parent="SpookArea"]
+position = Vector2(51, 83)
+shape = SubResource("RectangleShape2D_ad1rx")
+
+[connection signal="body_entered" from="SpookArea" to="." method="_on_spook_area_body_entered"]
