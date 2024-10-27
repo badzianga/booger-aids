@@ -45,8 +45,9 @@ func _physics_process(_delta: float) -> void:
 		move_and_slide()
 	else:
 		if Input.is_action_just_pressed("click") and autistic_case != null:
-			autistic_case.interact()
-			GlobalVariables.current_interactable = null
+			if position.distance_to(target) < 32:
+				autistic_case.interact()
+				GlobalVariables.current_interactable = null
 			#target.x = get_global_mouse_position().x
 		animation_player.play("idle")
 
