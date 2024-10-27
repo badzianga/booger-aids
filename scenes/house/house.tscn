@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://d61nxx0wh2fi"]
+[gd_scene load_steps=74 format=3 uid="uid://d61nxx0wh2fi"]
 
 [ext_resource type="PackedScene" uid="uid://7ifmdiqbak0l" path="res://scenes/player/player.tscn" id="1_amm8k"]
 [ext_resource type="Texture2D" uid="uid://c4i1x641enyht" path="res://assets/home/room_blockout.png" id="1_w7r23"]
@@ -53,6 +53,7 @@
 [ext_resource type="Texture2D" uid="uid://cnud8tm1ff0o4" path="res://assets/home/pokoj_obrazow/obraz11_2.png" id="51_y8wl2"]
 [ext_resource type="Texture2D" uid="uid://b6ob1254ip6xm" path="res://assets/home/pokoj_obrazow/obraz12_2.png" id="52_w0yuu"]
 [ext_resource type="Texture2D" uid="uid://bkgdmn0q22fkp" path="res://assets/home/pokoj_obrazow/obraz6_2.png" id="53_fpm8n"]
+[ext_resource type="PackedScene" uid="uid://dftl4x0e84yo6" path="res://scenes/house/light.tscn" id="54_e1oth"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m1w75"]
 resource_local_to_scene = true
@@ -694,6 +695,93 @@ energy = 0.9
 blend_mode = 1
 
 [node name="Lights" type="Node2D" parent="."]
+
+[node name="Light" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(1908, 1061)
+
+[node name="Light2" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(2368, 1061)
+
+[node name="Light3" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(3311, 1036)
+
+[node name="Light4" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(3638, 1036)
+
+[node name="Light5" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(4529, 1057)
+
+[node name="Light7" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(5712, 1057)
+
+[node name="Light8" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(7139, 1057)
+
+[node name="Light9" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(7522, 1057)
+
+[node name="Light10" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(7698, 276)
+
+[node name="Light11" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(7196, 276)
+
+[node name="Light12" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(6101, 293)
+
+[node name="Light13" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(5031, 322)
+
+[node name="Light14" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(4626, 311)
+
+[node name="Light15" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(2012, 1802)
+
+[node name="Light16" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(2481, 1802)
+
+[node name="Light17" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(1134, 1792)
+
+[node name="Light18" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(1134, 1792)
+
+[node name="Light19" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(615, 1767)
+
+[node name="Light20" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(3307, 1799)
+
+[node name="Light21" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(3847, 1759)
+
+[node name="Light22" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(4333, 1759)
+
+[node name="Light23" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(4335, 1759)
+
+[node name="Light24" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(4813, 1790)
+
+[node name="Light25" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(3255, 2561)
+
+[node name="Light26" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(3678, 2561)
+
+[node name="Light27" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(2508, 2561)
+
+[node name="Light28" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(1885, 2517)
+
+[node name="Light29" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(2198, 2517)
+
+[node name="Light6" parent="." instance=ExtResource("54_e1oth")]
+position = Vector2(5004, 1025)
 
 [connection signal="mouse_entered" from="Rooms/BasicRoomTemplate" to="Rooms/BasicRoomTemplate" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Rooms/BasicRoomTemplate" to="Rooms/BasicRoomTemplate" method="_on_mouse_exited"]
