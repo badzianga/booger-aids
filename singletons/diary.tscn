@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://co35hey84fc3v"]
+[gd_scene load_steps=6 format=3 uid="uid://co35hey84fc3v"]
 
 [ext_resource type="Texture2D" uid="uid://brkhq1lke4spg" path="res://assets/ui/TV_Screen.png" id="1_6tmnt"]
 [ext_resource type="Script" path="res://singletons/diary.gd" id="1_jvbvr"]
+[ext_resource type="FontFile" uid="uid://bggd4r03ecgpu" path="res://assets/fonts/Horrors.ttf" id="3_l6v8v"]
+[ext_resource type="PackedScene" uid="uid://d4jfjcs7k70aw" path="res://scenes/ui/entry_panel.tscn" id="4_s7gdo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8df8a"]
 bg_color = Color(1, 1, 1, 1)
@@ -67,7 +69,40 @@ columns = 3
 custom_minimum_size = Vector2(246, 0)
 layout_mode = 2
 size_flags_horizontal = 0
-size_flags_vertical = 3
+size_flags_vertical = 6
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="Control/CenterContainer/Panel/MarginContainer/GridContainer/Entries"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.490196, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_fonts/font = ExtResource("3_l6v8v")
+theme_override_font_sizes/font_size = 32
+text = "Discovered entries"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="casette" parent="Control/CenterContainer/Panel/MarginContainer/GridContainer/Entries" instance=ExtResource("4_s7gdo")]
+layout_mode = 2
+
+[node name="wig" parent="Control/CenterContainer/Panel/MarginContainer/GridContainer/Entries" instance=ExtResource("4_s7gdo")]
+layout_mode = 2
+
+[node name="finger" parent="Control/CenterContainer/Panel/MarginContainer/GridContainer/Entries" instance=ExtResource("4_s7gdo")]
+layout_mode = 2
+
+[node name="stew" parent="Control/CenterContainer/Panel/MarginContainer/GridContainer/Entries" instance=ExtResource("4_s7gdo")]
+layout_mode = 2
+
+[node name="leg" parent="Control/CenterContainer/Panel/MarginContainer/GridContainer/Entries" instance=ExtResource("4_s7gdo")]
+layout_mode = 2
+
+[node name="puppet" parent="Control/CenterContainer/Panel/MarginContainer/GridContainer/Entries" instance=ExtResource("4_s7gdo")]
+layout_mode = 2
+
+[node name="doll" parent="Control/CenterContainer/Panel/MarginContainer/GridContainer/Entries" instance=ExtResource("4_s7gdo")]
+layout_mode = 2
 
 [node name="ColorRect" type="ColorRect" parent="Control/CenterContainer/Panel/MarginContainer/GridContainer"]
 layout_mode = 2

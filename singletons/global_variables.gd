@@ -4,6 +4,16 @@ const dialogs := {
 	
 }
 
+const fuck_ups_for_descriptions := {
+	"casette": 3,
+	"wig": 3,
+	"finger": 4,
+	"stew": 5,
+	"leg": 5,
+	"puppet": 99,
+	"doll": 5,
+}
+
 const descriptions := {
 	"casette": {
 		"name": "\"Let's play a game\" casette",
@@ -29,7 +39,7 @@ const descriptions := {
 		"name": "Geezer's leg",
 		"text": "A symbol of the old man's strange preferences.",
 	},
-	"puppets": {
+	"puppet": {
 		"name": "You",
 		"text": "You danced to their tune. It's good that in the end you danced on their grave.",
 	},

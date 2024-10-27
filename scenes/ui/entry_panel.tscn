@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4jfjcs7k70aw"]
+
+[ext_resource type="Script" path="res://scenes/ui/entry_panel.gd" id="1_m3ctj"]
+[ext_resource type="FontFile" uid="uid://bggd4r03ecgpu" path="res://assets/fonts/Horrors.ttf" id="2_wr38r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0dtfd"]
+bg_color = Color(0.627451, 0.627451, 0.627451, 1)
+
+[node name="EntryPanel" type="Panel"]
+custom_minimum_size = Vector2(100, 32)
+theme_override_styles/panel = SubResource("StyleBoxFlat_0dtfd")
+script = ExtResource("1_m3ctj")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.6, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_wr38r")
+theme_override_font_sizes/font_size = 20
+text = "Label"
+horizontal_alignment = 1
+vertical_alignment = 1
