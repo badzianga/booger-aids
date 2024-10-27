@@ -69,6 +69,7 @@ const descriptions := {
 
 var collected: Array[String] = []
 var can_noise := true
+var lights: Array[Light2D] = []
 
 func collect(collectable_name: String, scary: bool = false) -> void:
 	if collectable_name in collected:

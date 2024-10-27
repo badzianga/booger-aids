@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://svlqgl21d60m"]
+[gd_scene load_steps=4 format=3 uid="uid://svlqgl21d60m"]
 
 [ext_resource type="FontFile" uid="uid://bggd4r03ecgpu" path="res://assets/fonts/Horrors.ttf" id="1_4tr0f"]
 [ext_resource type="Script" path="res://scenes/ui/scary_text.gd" id="1_qyidv"]
+[ext_resource type="AudioStream" uid="uid://wee2npih0aub" path="res://assets/sounds/censor.mp3" id="3_4vaw4"]
 
 [node name="ScaryText" type="ColorRect"]
 process_mode = 3
@@ -30,3 +31,7 @@ theme_override_font_sizes/normal_font_size = 100
 bbcode_enabled = true
 text = "[shake rate=20.0 level=50 connected=0][center]BOO HOOO[/center][/shake]"
 fit_content = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_4vaw4")
+autoplay = true

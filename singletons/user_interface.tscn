@@ -4,7 +4,6 @@
 
 [node name="UserInterface" type="CanvasLayer"]
 script = ExtResource("1_3kjqh")
-_time_increase_multiplier = 20.0
 
 [node name="Margin" type="MarginContainer" parent="."]
 anchors_preset = 15

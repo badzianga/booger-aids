@@ -426,7 +426,8 @@ position = Vector2(2563.5, 289.5)
 shape = SubResource("RectangleShape2D_k0trm")
 
 [node name="Doll" parent="Rooms/PlayRoom" instance=ExtResource("21_nfbau")]
-position = Vector2(495, 484)
+position = Vector2(791, 276)
+scale = Vector2(-1, 1)
 
 [node name="Konik" type="Sprite2D" parent="Rooms/PlayRoom"]
 position = Vector2(903, 468)
@@ -696,91 +697,88 @@ blend_mode = 1
 
 [node name="Lights" type="Node2D" parent="."]
 
-[node name="Light" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(1908, 1061)
 
-[node name="Light2" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light2" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(2368, 1061)
 
-[node name="Light3" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light3" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(3311, 1036)
 
-[node name="Light4" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light4" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(3638, 1036)
 
-[node name="Light5" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light5" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(4529, 1057)
 
-[node name="Light7" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light7" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(5712, 1057)
 
-[node name="Light8" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light8" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(7139, 1057)
 
-[node name="Light9" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light9" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(7522, 1057)
 
-[node name="Light10" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light10" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(7698, 276)
 
-[node name="Light11" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light11" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(7196, 276)
 
-[node name="Light12" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light12" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(6101, 293)
 
-[node name="Light13" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light13" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(5031, 322)
 
-[node name="Light14" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light14" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(4626, 311)
 
-[node name="Light15" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light15" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(2012, 1802)
 
-[node name="Light16" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light16" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(2481, 1802)
 
-[node name="Light17" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light17" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(1134, 1792)
 
-[node name="Light18" parent="." instance=ExtResource("54_e1oth")]
-position = Vector2(1134, 1792)
-
-[node name="Light19" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light19" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(615, 1767)
 
-[node name="Light20" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light20" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(3307, 1799)
 
-[node name="Light21" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light21" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(3847, 1759)
 
-[node name="Light22" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light22" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(4333, 1759)
 
-[node name="Light23" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light23" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(4335, 1759)
 
-[node name="Light24" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light24" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(4813, 1790)
 
-[node name="Light25" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light25" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(3255, 2561)
 
-[node name="Light26" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light26" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(3678, 2561)
 
-[node name="Light27" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light27" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(2508, 2561)
 
-[node name="Light28" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light28" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(1885, 2517)
 
-[node name="Light29" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light29" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(2198, 2517)
 
-[node name="Light6" parent="." instance=ExtResource("54_e1oth")]
+[node name="Light6" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(5004, 1025)
 
 [connection signal="mouse_entered" from="Rooms/BasicRoomTemplate" to="Rooms/BasicRoomTemplate" method="_on_mouse_entered"]
