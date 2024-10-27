@@ -31,7 +31,7 @@ func _input(event: InputEvent) -> void:
 func _physics_process(_delta: float) -> void:
 	velocity = position.direction_to(target) * speed
 	
-	if position.distance_to(target) > 16:
+	if position.distance_to(target) > 8:
 		if velocity.x > 0:
 			sprite.flip_h = false
 			sprite.position.x = 16

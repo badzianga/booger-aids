@@ -16,7 +16,7 @@ func stop_interaction() -> void:
 
 
 func _select_as_current() -> void:
-	print("Selected TV as current potential interactable")
+	print("Selected stairs as current potential interactable")
 	GlobalVariables.set_deferred("current_interactable", self)
 
 
