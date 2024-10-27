@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://beqqa8i26ccev"]
+[gd_scene load_steps=5 format=3 uid="uid://beqqa8i26ccev"]
 
 [ext_resource type="FontFile" uid="uid://bggd4r03ecgpu" path="res://assets/fonts/Horrors.ttf" id="1_8wrle"]
 [ext_resource type="Script" path="res://singletons/dialog_system.gd" id="1_mvhab"]
 [ext_resource type="Texture2D" uid="uid://bru5k3ecdy48" path="res://assets/dialog_box.png" id="2_7ek6f"]
+[ext_resource type="AudioStream" uid="uid://b6y1rgtwm2xqt" path="res://assets/sounds/whispering.mp3" id="4_aas20"]
 
 [node name="DialogSystem" type="CanvasLayer"]
 process_mode = 3
@@ -62,3 +63,8 @@ fit_content = true
 
 [node name="WaitTimerBecauseIHaveStupid" type="Timer" parent="."]
 one_shot = true
+
+[node name="Whispering" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_aas20")
+volume_db = -10.0
+bus = &"Sounds"

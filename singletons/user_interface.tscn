@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6oxfk51sfv0i"]
+[gd_scene load_steps=3 format=3 uid="uid://b6oxfk51sfv0i"]
 
 [ext_resource type="Script" path="res://singletons/user_interface.gd" id="1_3kjqh"]
+[ext_resource type="Texture2D" uid="uid://c5jakhxhb1hum" path="res://assets/dict_indicator.png" id="2_860si"]
 
 [node name="UserInterface" type="CanvasLayer"]
 script = ExtResource("1_3kjqh")
@@ -24,3 +25,14 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 value = 100.0
 show_percentage = false
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -160.0
+offset_right = 258.0
+offset_bottom = 98.0
+grow_vertical = 0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_860si")

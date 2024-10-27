@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://deo10nr3fb8cc"]
+[gd_scene load_steps=5 format=3 uid="uid://deo10nr3fb8cc"]
 
 [ext_resource type="Texture2D" uid="uid://drx55bk1ntwex" path="res://assets/home/lustro2.png" id="1_nbxnv"]
 [ext_resource type="Script" path="res://scenes/house/omori.gd" id="2_h8c20"]
+[ext_resource type="AudioStream" uid="uid://clmnnveirm4vh" path="res://assets/sounds/jumpscare.mp3" id="3_b2omb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ad1rx"]
 size = Vector2(122, 186)
@@ -15,5 +16,9 @@ script = ExtResource("2_h8c20")
 [node name="CollisionShape" type="CollisionShape2D" parent="SpookArea"]
 position = Vector2(51, 83)
 shape = SubResource("RectangleShape2D_ad1rx")
+
+[node name="Boo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_b2omb")
+volume_db = -10.0
 
 [connection signal="body_entered" from="SpookArea" to="." method="_on_spook_area_body_entered"]

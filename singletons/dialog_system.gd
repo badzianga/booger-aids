@@ -5,6 +5,7 @@ signal closed
 @onready var _initial_visible := false
 @onready var _text_label := $Control/Box/Margin/TextLabel
 @onready var wait_timer: Timer = $WaitTimerBecauseIHaveStupid
+@onready var whispering: AudioStreamPlayer = $Whispering
 
 
 func _ready() -> void:
@@ -21,6 +22,7 @@ func _input(event: InputEvent) -> void:
 	visible = false
 	get_tree().paused = false
 	print("And now dialog is hidden. Bruh!")
+	whispering.stop()
 	closed.emit()
 	GlobalVariables.can_noise = true
 
@@ -31,6 +33,7 @@ func display_dialog(id: String) -> void:
 	get_tree().paused = true
 	print("Dialog ", id, " displayed")
 	GlobalVariables.can_noise = false
+	whispering.play()
 
 func display_dialog_cursed(id: String) -> void:
 	visible = true
@@ -38,3 +41,4 @@ func display_dialog_cursed(id: String) -> void:
 	get_tree().paused = true
 	print("Dialog ", id, " displayed")
 	GlobalVariables.can_noise = false
+	whispering.play()
