@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://7ifmdiqbak0l"]
+[gd_scene load_steps=10 format=3 uid="uid://7ifmdiqbak0l"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_3amuv"]
 [ext_resource type="Texture2D" uid="uid://b6kpvxbwosfpr" path="res://assets/player/characterSprite.png" id="2_hgn04"]
+[ext_resource type="AudioStream" uid="uid://dvnmpg0agax5l" path="res://assets/sounds/walking.mp3" id="3_kfonn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7vqna"]
 radius = 40.0
@@ -72,7 +73,7 @@ tracks/1/keys = {
 resource_name = "walk"
 length = 0.8
 loop_mode = 1
-step = 0.1
+step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -96,6 +97,23 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [Vector2(0, -40), Vector2(0, 0), Vector2(0, -20), Vector2(0, 10)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.15, 0.55),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"step_sound"
+}, {
+"args": [],
+"method": &"step_sound"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_piv6x"]
@@ -129,6 +147,11 @@ shape = SubResource("CapsuleShape2D_tsk86")
 libraries = {
 "": SubResource("AnimationLibrary_piv6x")
 }
+
+[node name="StepBrotherIsStepping" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_kfonn")
+volume_db = 5.0
+bus = &"Sounds"
 
 [connection signal="area_entered" from="InteractableArea" to="." method="_on_interactable_area_area_entered"]
 [connection signal="area_exited" from="InteractableArea" to="." method="_on_interactable_area_area_exited"]

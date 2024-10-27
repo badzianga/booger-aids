@@ -7,5 +7,5 @@
 texture = ExtResource("1_2cjm4")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(0, 336)
+position = Vector2(0, 312)
 texture = ExtResource("2_iem07")

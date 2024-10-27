@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://cw6ru4x3kiyjc"]
+[gd_scene load_steps=11 format=3 uid="uid://cw6ru4x3kiyjc"]
 
 [ext_resource type="Script" path="res://scenes/house/tv.gd" id="1_ojxek"]
 [ext_resource type="Texture2D" uid="uid://bw71yot5qdply" path="res://assets/home/tv.png" id="2_7u3f6"]
 [ext_resource type="Shader" path="res://shaders/tv_noise.gdshader" id="2_xjpog"]
 [ext_resource type="Texture2D" uid="uid://b62veo2bqorr3" path="res://assets/home/crank.png" id="3_5mrdt"]
+[ext_resource type="AudioStream" uid="uid://8ct8rarx7rir" path="res://assets/sounds/korbka.mp3" id="5_s1nga"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_0p1es"]
 
@@ -46,6 +47,11 @@ texture = ExtResource("3_5mrdt")
 position = Vector2(-5, 14)
 rotation = -1.29329
 shape = SubResource("CapsuleShape2D_pmwsq")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_s1nga")
+volume_db = -10.0
+bus = &"Sounds"
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

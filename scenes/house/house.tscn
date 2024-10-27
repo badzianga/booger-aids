@@ -684,16 +684,16 @@ texture = SubResource("CanvasTexture_lrghs")
 
 [node name="Player" parent="." instance=ExtResource("1_amm8k")]
 position = Vector2(4688, 1320)
-speed = 800
 
 [node name="Camera" type="Camera2D" parent="Player"]
 offset = Vector2(0, -76)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-visible = false
 color = Color(1, 1, 0.870588, 1)
 energy = 0.9
 blend_mode = 1
+
+[node name="Lights" type="Node2D" parent="."]
 
 [connection signal="mouse_entered" from="Rooms/BasicRoomTemplate" to="Rooms/BasicRoomTemplate" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Rooms/BasicRoomTemplate" to="Rooms/BasicRoomTemplate" method="_on_mouse_exited"]

@@ -10,6 +10,7 @@ var mouse_in_room := false  # set in room script
 
 @onready var sprite := $Sprite
 @onready var animation_player := $AnimationPlayer
+@onready var step_brother_is_stepping := $StepBrotherIsStepping
 
 var autistic_case: Interactable = null
 
@@ -48,6 +49,11 @@ func _physics_process(_delta: float) -> void:
 			GlobalVariables.current_interactable = null
 			#target.x = get_global_mouse_position().x
 		animation_player.play("idle")
+
+
+func step_sound() -> void:
+	step_brother_is_stepping.pitch_scale = randf_range(0.9, 1.2)
+	step_brother_is_stepping.play()
 
 
 func stop() -> void:
