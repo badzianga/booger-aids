@@ -9,7 +9,7 @@ height = 340.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tsk86"]
 radius = 40.0
-height = 300.0
+height = 403.88
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_3amuv")

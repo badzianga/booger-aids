@@ -12,8 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://lbpqgcre4kkf" path="res://assets/home/pokoj_babci/komoda.png" id="6_fw5jt"]
 [ext_resource type="Texture2D" uid="uid://68hhxr14ua62" path="res://assets/home/pokoj_babci/obraz_babci_bg.png" id="7_r43i3"]
 [ext_resource type="Texture2D" uid="uid://ohr8e772ujnv" path="res://assets/home/lazienka1/wanna.png" id="7_wri3p"]
-[ext_resource type="Texture2D" uid="uid://cahogfbxxlyv4" path="res://assets/home/pokoj_babci/peruka.png" id="8_a5k7h"]
 [ext_resource type="Texture2D" uid="uid://cxfn3igf5y561" path="res://assets/home/lazienka1/zaslona1.png" id="8_katnm"]
+[ext_resource type="PackedScene" uid="uid://bsg4g2dvedkds" path="res://scenes/house/wig.tscn" id="9_6vv6a"]
 [ext_resource type="Texture2D" uid="uid://cip0xo2scndm6" path="res://assets/home/lazienka1/umywalka.png" id="9_v65vj"]
 [ext_resource type="Texture2D" uid="uid://bvck21hd4sa5f" path="res://assets/home/lazienka1/lustro.png" id="10_txvk8"]
 [ext_resource type="Texture2D" uid="uid://bf4cfhoo43e8v" path="res://assets/home/lazienka1/the-scariest-jumpscare.jpg" id="10_ua66d"]
@@ -149,9 +149,8 @@ texture = ExtResource("6_fw5jt")
 position = Vector2(725, 258)
 texture = ExtResource("7_r43i3")
 
-[node name="Peruka" type="Sprite2D" parent="Rooms/GrandmaRoom"]
-position = Vector2(720, 265)
-texture = ExtResource("8_a5k7h")
+[node name="Wig" parent="Rooms/GrandmaRoom" instance=ExtResource("9_6vv6a")]
+position = Vector2(720, 264)
 
 [node name="LivingRoom" type="Area2D" parent="Rooms"]
 position = Vector2(4203, 951)

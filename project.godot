@@ -24,6 +24,7 @@ buses/default_bus_layout="res://resources/audio_buses/default_bus_layout.tres"
 GlobalVariables="*res://singletons/global_variables.gd"
 TvLayer="*res://singletons/tv_layer.tscn"
 UserInterface="*res://singletons/user_interface.tscn"
+DialogSystem="*res://singletons/dialog_system.tscn"
 Diary="*res://singletons/diary.tscn"
 
 [display]

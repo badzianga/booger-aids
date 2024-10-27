@@ -25,9 +25,11 @@ func enable_noise(time: float) -> void:
 	_static_noise.playing = true
 	_white.visible = true
 	_timer.start(time)
+	get_tree().paused = true  # TODO: will this backfire???
 
 
 func _on_timer_timeout() -> void:
 	_static_noise.playing = false
 	_white.visible = false
 	noise_finished.emit()
+	get_tree().paused = false

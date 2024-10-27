@@ -1,34 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2uhiay838vkj"]
+[gd_scene load_steps=3 format=3 uid="uid://beqqa8i26ccev"]
 
 [ext_resource type="FontFile" uid="uid://bggd4r03ecgpu" path="res://assets/fonts/Horrors.ttf" id="1_8wrle"]
-[ext_resource type="Script" path="res://scenes/ui/dialog_system.gd" id="1_mvhab"]
+[ext_resource type="Script" path="res://singletons/dialog_system.gd" id="1_mvhab"]
 
-[node name="DialogSystem" type="Control"]
+[node name="DialogSystem" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_mvhab")
+
+[node name="Control" type="Control" parent="."]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_mvhab")
 
-[node name="Box" type="ColorRect" parent="."]
+[node name="Box" type="ColorRect" parent="Control"]
 custom_minimum_size = Vector2(800, 200)
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
+anchor_bottom = 0.5
 offset_left = -400.0
-offset_top = -232.0
+offset_top = -100.0
 offset_right = 400.0
-offset_bottom = -32.0
+offset_bottom = 100.0
 grow_horizontal = 2
-grow_vertical = 0
-color = Color(0.25098, 0.25098, 0.25098, 0.627451)
+grow_vertical = 2
+color = Color(0.25098, 0.25098, 0.25098, 0.784314)
 
-[node name="Margin" type="MarginContainer" parent="Box"]
+[node name="Margin" type="MarginContainer" parent="Control/Box"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -40,7 +44,7 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="TextLabel" type="RichTextLabel" parent="Box/Margin"]
+[node name="TextLabel" type="RichTextLabel" parent="Control/Box/Margin"]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -54,3 +58,6 @@ theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
 text = "[center]booger aids[/center]"
 fit_content = true
+
+[node name="WaitTimerBecauseIHaveStupid" type="Timer" parent="."]
+one_shot = true

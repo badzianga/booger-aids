@@ -17,6 +17,7 @@ shader_parameter/strength = 0.5
 shader_parameter/noise = SubResource("NoiseTexture2D_rkino")
 
 [node name="TVLayer" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_7lwnr")
 
 [node name="White" type="ColorRect" parent="."]

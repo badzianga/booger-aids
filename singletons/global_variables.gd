@@ -1,7 +1,7 @@
 extends Node
 
 const dialogs := {
-	
+	"wig": "A soft, silvery-gray wig styled in gentle curls, reminiscent of Granny's classic look and comforting presence."
 }
 
 const fuck_ups_for_descriptions := {
@@ -68,6 +68,20 @@ const descriptions := {
 		"text": "This huge hole in the ground contains a culinary masterpiece with very unique meat.",
 	},
 }
+
+var collected: Array[String] = []
+
+func collect(collectable_name: String) -> void:
+	if collectable_name in collected:
+		return
+	DialogSystem.display_dialog(collectable_name)
+	DialogSystem.wait_timer.start()
+	await DialogSystem.closed
+	print("Dialog window closed, noise goes brrr")
+	TvLayer.random_noise()
+	collected.append(collectable_name)
+	fuck_up_level += 1
+	print("Collected: ", collectable_name, ", fuck_up_level increased to ", fuck_up_level)
 
 var current_interactable: Interactable = null
 var fuck_up_level := 0  # a.k.a. collectibles found
