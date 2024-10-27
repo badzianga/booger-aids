@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://d61nxx0wh2fi"]
+[gd_scene load_steps=59 format=3 uid="uid://d61nxx0wh2fi"]
 
 [ext_resource type="PackedScene" uid="uid://7ifmdiqbak0l" path="res://scenes/player/player.tscn" id="1_amm8k"]
 [ext_resource type="Texture2D" uid="uid://c4i1x641enyht" path="res://assets/home/room_blockout.png" id="1_w7r23"]
@@ -43,6 +43,7 @@
 [ext_resource type="Texture2D" uid="uid://bh1coiilvkai5" path="res://assets/home/pokoj_kukielek/kukielka3.png" id="29_7427q"]
 [ext_resource type="PackedScene" uid="uid://yu6im8cblcbh" path="res://scenes/void.tscn" id="31_71kdh"]
 [ext_resource type="PackedScene" uid="uid://c7f0oskxfjunq" path="res://scenes/house/puppet.tscn" id="31_j2gbp"]
+[ext_resource type="PackedScene" uid="uid://dkoaie7bifo41" path="res://scenes/house/spooky_arm.tscn" id="43_w7f1i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m1w75"]
 resource_local_to_scene = true
@@ -498,6 +499,15 @@ texture = SubResource("CanvasTexture_6afch")
 position = Vector2(154.5, 283)
 scale = Vector2(1, 2.37975)
 texture = ExtResource("10_txvk8")
+
+[node name="SpookyArm" parent="Rooms/BathRoomV2" instance=ExtResource("43_w7f1i")]
+position = Vector2(836, 401)
+
+[node name="SpookyArm2" parent="Rooms/BathRoomV2" instance=ExtResource("43_w7f1i")]
+position = Vector2(919, 362)
+
+[node name="SpookyArm3" parent="Rooms/BathRoomV2" instance=ExtResource("43_w7f1i")]
+position = Vector2(999, 318)
 
 [node name="Wanna" type="Sprite2D" parent="Rooms/BathRoomV2"]
 position = Vector2(898, 315)
