@@ -1,6 +1,11 @@
 class_name Finger
 extends Interactable
 
+@export var jumpscare: JumpscareBaluszkowoSobolewski
+
+func _ready() -> void:
+	assert(jumpscare != null, "Set jumpscare!")
+
 
 # THIS SHOULD BE IN EVERY INTERACTABLE -------------------------------------------------------------
 func interact() -> void:
@@ -8,6 +13,7 @@ func interact() -> void:
 	# TODO: collect, update diary and noise here
 	GlobalVariables.collect("finger")
 	await GlobalVariables.item_collected
+	jumpscare.activate_timer()
 	queue_free()
 
 

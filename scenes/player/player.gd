@@ -9,11 +9,13 @@ var just_arrived := false
 var mouse_in_room := false  # set in room script
 
 @onready var sprite := $Sprite
+@onready var animation_player := $AnimationPlayer
 
 
 func _ready() -> void:
 	GlobalVariables.player = self
 	target = position
+	animation_player.play("idle")
 
 
 func _input(event: InputEvent) -> void:
@@ -32,13 +34,14 @@ func _physics_process(_delta: float) -> void:
 	velocity = position.direction_to(target) * speed
 	
 	if position.distance_to(target) > 8:
+		animation_player.play("walk")
 		if velocity.x > 0:
 			sprite.flip_h = false
-			sprite.position.x = 16
 		else:
 			sprite.flip_h = true
-			sprite.position.x = -16
 		move_and_slide()
+	else:
+		animation_player.play("idle")
 
 
 func teleport_to(target_position: Vector2) -> void:

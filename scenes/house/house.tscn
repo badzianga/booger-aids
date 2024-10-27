@@ -20,7 +20,6 @@
 [ext_resource type="Texture2D" uid="uid://cip0xo2scndm6" path="res://assets/home/lazienka1/umywalka.png" id="9_v65vj"]
 [ext_resource type="Texture2D" uid="uid://bmvq7o4wg1r" path="res://assets/kuchenka.png" id="9_xjo5k"]
 [ext_resource type="Texture2D" uid="uid://bvck21hd4sa5f" path="res://assets/home/lazienka1/lustro.png" id="10_txvk8"]
-[ext_resource type="Texture2D" uid="uid://bf4cfhoo43e8v" path="res://assets/home/lazienka1/the-scariest-jumpscare.jpg" id="10_ua66d"]
 [ext_resource type="PackedScene" uid="uid://b4uetbwx3sqtx" path="res://scenes/house/kwiatek.tscn" id="10_xj80s"]
 [ext_resource type="Texture2D" uid="uid://drd3xf1r8064k" path="res://assets/home/przedpokoj1/obraz_dziadka.png" id="12_5c06y"]
 [ext_resource type="Script" path="res://scenes/house/windows.gd" id="12_otima"]
@@ -35,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://cruhtkj4tdj0w" path="res://assets/konik.png" id="22_iif5k"]
 [ext_resource type="Texture2D" uid="uid://1rqpfbubvoa1" path="res://assets/home/pokoj_obrazow/obraz6.png" id="23_u6r4x"]
 [ext_resource type="Texture2D" uid="uid://ch3dcrittbin8" path="res://assets/home/pokoj_obrazow/obraz7.png" id="24_aata7"]
+[ext_resource type="PackedScene" uid="uid://6u4fe7lauw5g" path="res://scenes/house/jumpscare_baluszkowo_sobolewski.tscn" id="24_w0ynf"]
 [ext_resource type="Texture2D" uid="uid://dxifbmbm6ddh7" path="res://assets/home/pokoj_obrazow/obraz8.png" id="25_lo5mf"]
 [ext_resource type="PackedScene" uid="uid://bcbdgnxpbu0pe" path="res://scenes/house/curtain.tscn" id="26_xv37r"]
 [ext_resource type="PackedScene" uid="uid://b2n7r7kfodgy8" path="res://scenes/house/leg.tscn" id="27_gja5j"]
@@ -345,11 +345,7 @@ position = Vector2(352, 254)
 scale = Vector2(96.0002, 144)
 texture = SubResource("CanvasTexture_41l8l")
 
-[node name="JumpscareBaluszkowoSobolewski" type="Sprite2D" parent="Rooms/BathRoom"]
-modulate = Color(1, 0, 0, 1)
-position = Vector2(352, 255.5)
-scale = Vector2(0.216001, 0.298)
-texture = ExtResource("10_ua66d")
+[node name="JumpscareBaluszkowoSobolewski" parent="Rooms/BathRoom" instance=ExtResource("24_w0ynf")]
 
 [node name="Lustro" type="Sprite2D" parent="Rooms/BathRoom"]
 position = Vector2(352, 254)
@@ -358,8 +354,9 @@ texture = ExtResource("10_txvk8")
 [node name="Curtain" parent="Rooms/BathRoom" instance=ExtResource("26_xv37r")]
 position = Vector2(917, 288)
 
-[node name="Finger" parent="Rooms/BathRoom" instance=ExtResource("21_sf4xg")]
+[node name="Finger" parent="Rooms/BathRoom" node_paths=PackedStringArray("jumpscare") instance=ExtResource("21_sf4xg")]
 position = Vector2(376, 374)
+jumpscare = NodePath("../JumpscareBaluszkowoSobolewski")
 
 [node name="CollisionShape" parent="Rooms/BathRoom/Finger" index="1"]
 position = Vector2(-24.5, -12)
@@ -581,7 +578,6 @@ texture = SubResource("CanvasTexture_lrghs")
 
 [node name="Player" parent="." instance=ExtResource("1_amm8k")]
 position = Vector2(4688, 1320)
-speed = 800
 
 [node name="Camera" type="Camera2D" parent="Player"]
 offset = Vector2(0, -76)
