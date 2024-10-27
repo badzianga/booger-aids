@@ -54,12 +54,23 @@ text = "BY DOUBLE TROUBLE"
 
 [node name="Play" type="Button" parent="."]
 layout_mode = 0
-offset_left = 800.0
-offset_top = 320.0
-offset_right = 923.0
-offset_bottom = 389.0
+offset_left = 320.0
+offset_top = 296.0
+offset_right = 443.0
+offset_bottom = 365.0
 theme_override_fonts/font = ExtResource("3_giurw")
 theme_override_font_sizes/font_size = 60
 text = "PLAY"
 
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 296.0
+offset_right = 923.0
+offset_bottom = 365.0
+theme_override_fonts/font = ExtResource("3_giurw")
+theme_override_font_sizes/font_size = 60
+text = "QUIT"
+
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

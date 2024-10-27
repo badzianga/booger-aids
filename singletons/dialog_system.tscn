@@ -67,5 +67,5 @@ one_shot = true
 
 [node name="Whispering" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_aas20")
-volume_db = -10.0
+volume_db = -20.0
 bus = &"Sounds"

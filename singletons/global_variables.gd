@@ -116,6 +116,7 @@ func collect(collectable_name: String, scary: bool = false) -> void:
 	if fuck_up_level == 7:
 		set_physics_process(false)
 		print("Bardzo się starałeś no i wygrałeś!")
+		Diary.set_process_input(false)
 		TvLayer.enable_noise(5.0)
 		var victory_screen := VictoryScreen.instantiate()
 		get_tree().root.add_child(victory_screen)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://d61nxx0wh2fi"]
+[gd_scene load_steps=76 format=3 uid="uid://d61nxx0wh2fi"]
 
 [ext_resource type="PackedScene" uid="uid://7ifmdiqbak0l" path="res://scenes/player/player.tscn" id="1_amm8k"]
 [ext_resource type="Script" path="res://scenes/house/house.gd" id="1_lvvlh"]
@@ -55,6 +55,7 @@
 [ext_resource type="Texture2D" uid="uid://b6ob1254ip6xm" path="res://assets/home/pokoj_obrazow/obraz12_2.png" id="52_w0yuu"]
 [ext_resource type="Texture2D" uid="uid://bkgdmn0q22fkp" path="res://assets/home/pokoj_obrazow/obraz6_2.png" id="53_fpm8n"]
 [ext_resource type="PackedScene" uid="uid://dftl4x0e84yo6" path="res://scenes/house/light.tscn" id="54_e1oth"]
+[ext_resource type="AudioStream" uid="uid://c8j610ujvxngw" path="res://assets/sounds/bg.mp3" id="56_8hdas"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m1w75"]
 resource_local_to_scene = true
@@ -782,6 +783,12 @@ position = Vector2(2198, 2517)
 
 [node name="Light6" parent="Lights" instance=ExtResource("54_e1oth")]
 position = Vector2(5004, 1025)
+
+[node name="Ambient" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("56_8hdas")
+volume_db = 5.0
+autoplay = true
+bus = &"Music"
 
 [connection signal="mouse_entered" from="Rooms/BasicRoomTemplate" to="Rooms/BasicRoomTemplate" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Rooms/BasicRoomTemplate" to="Rooms/BasicRoomTemplate" method="_on_mouse_exited"]
