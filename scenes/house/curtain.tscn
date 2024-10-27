@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcbdgnxpbu0pe"]
+
+[ext_resource type="Script" path="res://scenes/house/curtain.gd" id="1_d4r1s"]
+[ext_resource type="Texture2D" uid="uid://cxfn3igf5y561" path="res://assets/home/lazienka1/zaslona1.png" id="2_u86dr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g3meb"]
+size = Vector2(423, 441)
+
+[node name="Curtain" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_d4r1s")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_u86dr")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2(-7.5, 21.5)
+shape = SubResource("RectangleShape2D_g3meb")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

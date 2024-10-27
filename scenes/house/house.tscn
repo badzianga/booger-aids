@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://cbqy2kfs0kjq5" path="res://assets/zlew.png" id="7_6ycfw"]
 [ext_resource type="Texture2D" uid="uid://68hhxr14ua62" path="res://assets/home/pokoj_babci/obraz_babci_bg.png" id="7_r43i3"]
 [ext_resource type="Texture2D" uid="uid://ohr8e772ujnv" path="res://assets/home/lazienka1/wanna.png" id="7_wri3p"]
-[ext_resource type="Texture2D" uid="uid://cxfn3igf5y561" path="res://assets/home/lazienka1/zaslona1.png" id="8_katnm"]
 [ext_resource type="Texture2D" uid="uid://dkynspc2t6wvd" path="res://assets/blat.png" id="8_sfk5m"]
 [ext_resource type="PackedScene" uid="uid://bsg4g2dvedkds" path="res://scenes/house/wig.tscn" id="9_6vv6a"]
 [ext_resource type="Texture2D" uid="uid://cip0xo2scndm6" path="res://assets/home/lazienka1/umywalka.png" id="9_v65vj"]
@@ -37,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://1rqpfbubvoa1" path="res://assets/home/pokoj_obrazow/obraz6.png" id="23_u6r4x"]
 [ext_resource type="Texture2D" uid="uid://ch3dcrittbin8" path="res://assets/home/pokoj_obrazow/obraz7.png" id="24_aata7"]
 [ext_resource type="Texture2D" uid="uid://dxifbmbm6ddh7" path="res://assets/home/pokoj_obrazow/obraz8.png" id="25_lo5mf"]
+[ext_resource type="PackedScene" uid="uid://bcbdgnxpbu0pe" path="res://scenes/house/curtain.tscn" id="26_xv37r"]
 [ext_resource type="PackedScene" uid="uid://b2n7r7kfodgy8" path="res://scenes/house/leg.tscn" id="27_gja5j"]
 [ext_resource type="Texture2D" uid="uid://tqteinhfpvj5" path="res://assets/home/pokoj_kukielek/kukielka1.png" id="27_quiil"]
 [ext_resource type="Texture2D" uid="uid://c57k2fv8072h7" path="res://assets/home/pokoj_kukielek/kukielka2.png" id="28_h2eif"]
@@ -98,13 +98,13 @@ size = Vector2(336, 368)
 
 [node name="House" type="Node2D"]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="VoidBackground" type="CanvasLayer" parent="."]
 layer = -1
 
-[node name="Marker" type="Marker2D" parent="CanvasLayer"]
+[node name="Marker" type="Marker2D" parent="VoidBackground"]
 position = Vector2(640, 360)
 
-[node name="Void" parent="CanvasLayer/Marker" instance=ExtResource("31_71kdh")]
+[node name="Void" parent="VoidBackground/Marker" instance=ExtResource("31_71kdh")]
 
 [node name="RoomLayout" type="Sprite2D" parent="."]
 texture = ExtResource("1_w7r23")
@@ -334,10 +334,6 @@ script = ExtResource("2_qfp4q")
 position = Vector2(912, 486)
 texture = ExtResource("7_wri3p")
 
-[node name="Zaslona1" type="Sprite2D" parent="Rooms/BathRoom"]
-position = Vector2(904, 268)
-texture = ExtResource("8_katnm")
-
 [node name="Umywalka" type="Sprite2D" parent="Rooms/BathRoom"]
 position = Vector2(352, 446)
 texture = ExtResource("9_v65vj")
@@ -357,6 +353,9 @@ texture = ExtResource("10_ua66d")
 [node name="Lustro" type="Sprite2D" parent="Rooms/BathRoom"]
 position = Vector2(352, 254)
 texture = ExtResource("10_txvk8")
+
+[node name="Curtain" parent="Rooms/BathRoom" instance=ExtResource("26_xv37r")]
+position = Vector2(917, 288)
 
 [node name="Finger" parent="Rooms/BathRoom" instance=ExtResource("21_sf4xg")]
 position = Vector2(376, 374)
