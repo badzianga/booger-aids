@@ -1,5 +1,7 @@
 extends Node
 
+signal item_collected
+
 const dialogs := {
 	"wig": "A frizzy, dusty-gray wig with thinning curls, looking like it’s seen a few too many decades on an old hag's head."
 }
@@ -85,6 +87,7 @@ func collect(collectable_name: String, scary: bool = false) -> void:
 	collected.append(collectable_name)
 	fuck_up_level += 1
 	print("Collected: ", collectable_name, ", fuck_up_level increased to ", fuck_up_level)
+	item_collected.emit()
 
 var current_interactable: Interactable = null
 var fuck_up_level := 0  # a.k.a. collectibles found

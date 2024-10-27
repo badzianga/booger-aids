@@ -7,6 +7,7 @@ func interact() -> void:
 	print("This should be printed just when player arrives to the wig")
 	# TODO: collect, update diary and noise here
 	GlobalVariables.collect("wig", true)
+	await GlobalVariables.item_collected
 	queue_free()
 
 
