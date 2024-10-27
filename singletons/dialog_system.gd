@@ -29,3 +29,9 @@ func display_dialog(id: String) -> void:
 	_text_label.bbcode_text = &"[center]" + GlobalVariables.dialogs[id] + &"[/center]"
 	get_tree().paused = true
 	print("Dialog ", id, " displayed")
+
+func display_dialog_cursed(id: String) -> void:
+	visible = true
+	_text_label.bbcode_text = &"[center][color=#b40000]" + GlobalVariables.dialogs[id] + &"[/color][/center]"
+	get_tree().paused = true
+	print("Dialog ", id, " displayed")

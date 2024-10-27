@@ -6,7 +6,7 @@ extends Interactable
 func interact() -> void:
 	print("This should be printed just when player arrives to the wig")
 	# TODO: collect, update diary and noise here
-	GlobalVariables.collect("wig")
+	GlobalVariables.collect("wig", true)
 	queue_free()
 
 

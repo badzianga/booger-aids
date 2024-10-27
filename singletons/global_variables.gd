@@ -1,7 +1,7 @@
 extends Node
 
 const dialogs := {
-	"wig": "A soft, silvery-gray wig styled in gentle curls, reminiscent of Granny's classic look and comforting presence."
+	"wig": "A frizzy, dusty-gray wig with thinning curls, looking like it’s seen a few too many decades on an old hag's head."
 }
 
 const fuck_ups_for_descriptions := {
@@ -71,10 +71,13 @@ const descriptions := {
 
 var collected: Array[String] = []
 
-func collect(collectable_name: String) -> void:
+func collect(collectable_name: String, scary: bool = false) -> void:
 	if collectable_name in collected:
 		return
-	DialogSystem.display_dialog(collectable_name)
+	if scary:
+		DialogSystem.display_dialog_cursed(collectable_name)
+	else:
+		DialogSystem.display_dialog(collectable_name)
 	DialogSystem.wait_timer.start()
 	await DialogSystem.closed
 	print("Dialog window closed, noise goes brrr")
