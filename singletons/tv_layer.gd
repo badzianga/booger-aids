@@ -5,6 +5,8 @@ extends CanvasLayer
 @onready var _timer := $Timer
 @onready var funny_noise := $FunnyNoise
 
+const ScaryTextScene := preload("res://scenes/ui/scary_text.tscn")
+
 signal noise_finished
 
 
@@ -35,6 +37,12 @@ func enable_noise(time: float) -> void:
 
 func _on_timer_timeout() -> void:
 	_static_noise.playing = false
+	if randi_range(0, 3) == 0:  ## 33% chance for spooky
+			var scary := ScaryTextScene.instantiate()
+			scary.random_text()
+			$White.add_child(scary)
+			await get_tree().create_timer(randf_range(0.6, 2.0)).timeout
+			scary.queue_free()
 	_white.visible = false
 	noise_finished.emit()
 	get_tree().paused = false

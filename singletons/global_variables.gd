@@ -2,10 +2,6 @@ extends Node
 
 signal item_collected
 
-const dialogs := {
-	"wig": "A frizzy, dusty-gray wig with thinning curls, looking like it’s seen a few too many decades on an old hag's head."
-}
-
 const fuck_ups_for_descriptions := {
 	"casette": 3,
 	"wig": 3,
