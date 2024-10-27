@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv7yqgblyg48o"]
+
+[ext_resource type="Script" path="res://scenes/house/casette.gd" id="1_h8lgn"]
+[ext_resource type="Texture2D" uid="uid://cjerlsm3vuhsk" path="res://assets/home/kaseta.png" id="2_wll4q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hgi2k"]
+size = Vector2(52, 26)
+
+[node name="Casette" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_h8lgn")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_wll4q")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hgi2k")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

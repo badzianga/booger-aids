@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2n7r7kfodgy8"]
+
+[ext_resource type="Script" path="res://scenes/house/leg.gd" id="1_qk4me"]
+[ext_resource type="Texture2D" uid="uid://dvvxcy481f1qy" path="res://assets/home/pokoj_obrazow/gramps_leg.png" id="2_xluw0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pmwsq"]
+radius = 40.047
+height = 286.23
+
+[node name="Leg" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_qk4me")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_xluw0")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+rotation = -0.349066
+shape = SubResource("CapsuleShape2D_pmwsq")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

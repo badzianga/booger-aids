@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ceyac1x7nmrsy"]
+
+[ext_resource type="Texture2D" uid="uid://7n44wugot6ry" path="res://assets/home/lazienka1/palec.png" id="1_5ib54"]
+[ext_resource type="Script" path="res://scenes/house/finger.gd" id="1_7rujb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hr8nt"]
+size = Vector2(79, 360)
+
+[node name="Finger" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_7rujb")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_5ib54")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hr8nt")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

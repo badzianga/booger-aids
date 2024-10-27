@@ -1,43 +1,54 @@
-[gd_scene load_steps=42 format=3 uid="uid://d61nxx0wh2fi"]
+[gd_scene load_steps=54 format=3 uid="uid://d61nxx0wh2fi"]
 
 [ext_resource type="PackedScene" uid="uid://7ifmdiqbak0l" path="res://scenes/player/player.tscn" id="1_amm8k"]
 [ext_resource type="Texture2D" uid="uid://c4i1x641enyht" path="res://assets/home/room_blockout.png" id="1_w7r23"]
 [ext_resource type="Texture2D" uid="uid://c62j5rek1kxrs" path="res://assets/home/windows_xp.png" id="2_6g3tv"]
 [ext_resource type="Script" path="res://scenes/house/room.gd" id="2_qfp4q"]
 [ext_resource type="PackedScene" uid="uid://cw6ru4x3kiyjc" path="res://scenes/house/tv.tscn" id="3_aob1w"]
+[ext_resource type="Texture2D" uid="uid://bbod51vbup8dy" path="res://assets/big_stew.png" id="4_1c2of"]
+[ext_resource type="PackedScene" uid="uid://c1wf1r4xp70ul" path="res://scenes/house/stew.tscn" id="4_axqvy"]
 [ext_resource type="Texture2D" uid="uid://bsokg6vdro3nx" path="res://assets/home/pokoj_babci/lozko.png" id="4_iqt6r"]
 [ext_resource type="Texture2D" uid="uid://d01xm1sep0xee" path="res://assets/home/sophie.png" id="4_l41q1"]
 [ext_resource type="PackedScene" uid="uid://4frpbjvqq3ti" path="res://scenes/house/portal.tscn" id="5_2ikdw"]
 [ext_resource type="Texture2D" uid="uid://cxn2ky3osu4rf" path="res://assets/home/pokoj_babci/kwiatek.png" id="5_folxq"]
 [ext_resource type="Texture2D" uid="uid://lbpqgcre4kkf" path="res://assets/home/pokoj_babci/komoda.png" id="6_fw5jt"]
+[ext_resource type="Texture2D" uid="uid://cbqy2kfs0kjq5" path="res://assets/zlew.png" id="7_6ycfw"]
 [ext_resource type="Texture2D" uid="uid://68hhxr14ua62" path="res://assets/home/pokoj_babci/obraz_babci_bg.png" id="7_r43i3"]
 [ext_resource type="Texture2D" uid="uid://ohr8e772ujnv" path="res://assets/home/lazienka1/wanna.png" id="7_wri3p"]
 [ext_resource type="Texture2D" uid="uid://cxfn3igf5y561" path="res://assets/home/lazienka1/zaslona1.png" id="8_katnm"]
+[ext_resource type="Texture2D" uid="uid://dkynspc2t6wvd" path="res://assets/blat.png" id="8_sfk5m"]
 [ext_resource type="PackedScene" uid="uid://bsg4g2dvedkds" path="res://scenes/house/wig.tscn" id="9_6vv6a"]
 [ext_resource type="Texture2D" uid="uid://cip0xo2scndm6" path="res://assets/home/lazienka1/umywalka.png" id="9_v65vj"]
+[ext_resource type="Texture2D" uid="uid://bmvq7o4wg1r" path="res://assets/kuchenka.png" id="9_xjo5k"]
 [ext_resource type="Texture2D" uid="uid://bvck21hd4sa5f" path="res://assets/home/lazienka1/lustro.png" id="10_txvk8"]
 [ext_resource type="Texture2D" uid="uid://bf4cfhoo43e8v" path="res://assets/home/lazienka1/the-scariest-jumpscare.jpg" id="10_ua66d"]
+[ext_resource type="PackedScene" uid="uid://b4uetbwx3sqtx" path="res://scenes/house/kwiatek.tscn" id="10_xj80s"]
 [ext_resource type="Texture2D" uid="uid://drd3xf1r8064k" path="res://assets/home/przedpokoj1/obraz_dziadka.png" id="12_5c06y"]
+[ext_resource type="PackedScene" uid="uid://cv7yqgblyg48o" path="res://scenes/house/casette.tscn" id="13_2jgoc"]
 [ext_resource type="Texture2D" uid="uid://drc37qxf4f8qw" path="res://assets/home/pokoj_obrazow/obraz1.png" id="18_6j8k0"]
 [ext_resource type="Texture2D" uid="uid://dljewcltvceqv" path="res://assets/home/pokoj_obrazow/obraz2.png" id="19_h5ipy"]
 [ext_resource type="Texture2D" uid="uid://dc2oukbghal4o" path="res://assets/home/pokoj_obrazow/obraz3.png" id="20_fcmjr"]
+[ext_resource type="PackedScene" uid="uid://bqf34jyhdjohu" path="res://scenes/house/doll.tscn" id="21_nfbau"]
+[ext_resource type="PackedScene" uid="uid://ceyac1x7nmrsy" path="res://scenes/house/finger.tscn" id="21_sf4xg"]
 [ext_resource type="Texture2D" uid="uid://csbbm7qsqrnd1" path="res://assets/home/pokoj_obrazow/obraz4.png" id="21_u2wn6"]
 [ext_resource type="Texture2D" uid="uid://kyl1ptnooyh3" path="res://assets/home/pokoj_obrazow/obraz5.png" id="22_dwwbv"]
+[ext_resource type="Texture2D" uid="uid://cruhtkj4tdj0w" path="res://assets/konik.png" id="22_iif5k"]
 [ext_resource type="Texture2D" uid="uid://1rqpfbubvoa1" path="res://assets/home/pokoj_obrazow/obraz6.png" id="23_u6r4x"]
 [ext_resource type="Texture2D" uid="uid://ch3dcrittbin8" path="res://assets/home/pokoj_obrazow/obraz7.png" id="24_aata7"]
 [ext_resource type="Texture2D" uid="uid://dxifbmbm6ddh7" path="res://assets/home/pokoj_obrazow/obraz8.png" id="25_lo5mf"]
-[ext_resource type="Texture2D" uid="uid://dvvxcy481f1qy" path="res://assets/home/pokoj_obrazow/gramps_leg.png" id="26_8tfx1"]
+[ext_resource type="PackedScene" uid="uid://b2n7r7kfodgy8" path="res://scenes/house/leg.tscn" id="27_gja5j"]
 [ext_resource type="Texture2D" uid="uid://tqteinhfpvj5" path="res://assets/home/pokoj_kukielek/kukielka1.png" id="27_quiil"]
 [ext_resource type="Texture2D" uid="uid://c57k2fv8072h7" path="res://assets/home/pokoj_kukielek/kukielka2.png" id="28_h2eif"]
 [ext_resource type="Texture2D" uid="uid://bh1coiilvkai5" path="res://assets/home/pokoj_kukielek/kukielka3.png" id="29_7427q"]
 [ext_resource type="PackedScene" uid="uid://yu6im8cblcbh" path="res://scenes/void.tscn" id="31_71kdh"]
+[ext_resource type="PackedScene" uid="uid://c7f0oskxfjunq" path="res://scenes/house/puppet.tscn" id="31_j2gbp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m1w75"]
 resource_local_to_scene = true
 size = Vector2(1093.5, 594)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c7xw3"]
-size = Vector2(3664, 597)
+size = Vector2(3692, 597)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5e1t6"]
 size = Vector2(272, 168)
@@ -55,6 +66,9 @@ size = Vector2(5037, 585)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_el7xp"]
 size = Vector2(2450, 582)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_da2up"]
+size = Vector2(336, 368)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_6afch"]
 
@@ -90,8 +104,15 @@ position = Vector2(4201, 218)
 script = ExtResource("2_qfp4q")
 
 [node name="CollisionShape" type="CollisionShape2D" parent="Rooms/GrandpaRoom"]
-position = Vector2(1899, 297.5)
+position = Vector2(1885, 297.5)
 shape = SubResource("RectangleShape2D_c7xw3")
+
+[node name="BigStew" type="Sprite2D" parent="Rooms/GrandpaRoom"]
+position = Vector2(583, 446)
+texture = ExtResource("4_1c2of")
+
+[node name="Stew" parent="Rooms/GrandpaRoom" instance=ExtResource("4_axqvy")]
+position = Vector2(583, 454)
 
 [node name="GrandpaHall" type="Area2D" parent="Rooms"]
 position = Vector2(5490, 215)
@@ -110,6 +131,34 @@ shape = SubResource("RectangleShape2D_5e1t6")
 [node name="Kitchen" type="Area2D" parent="Rooms"]
 position = Vector2(6780, 216)
 script = ExtResource("2_qfp4q")
+
+[node name="Zlew" type="Sprite2D" parent="Rooms/Kitchen"]
+position = Vector2(365, 108.5)
+rotation = -3.14159
+texture = ExtResource("7_6ycfw")
+
+[node name="Blat3" type="Sprite2D" parent="Rooms/Kitchen"]
+position = Vector2(509, 100.5)
+rotation = -3.14159
+texture = ExtResource("8_sfk5m")
+
+[node name="Kuchenka" type="Sprite2D" parent="Rooms/Kitchen"]
+position = Vector2(653, 92.5)
+rotation = 3.14159
+texture = ExtResource("9_xjo5k")
+
+[node name="Blat2" type="Sprite2D" parent="Rooms/Kitchen"]
+position = Vector2(797, 52.5)
+rotation = 3.14159
+texture = ExtResource("8_sfk5m")
+
+[node name="Kwiatek" parent="Rooms/Kitchen" instance=ExtResource("10_xj80s")]
+
+[node name="First" parent="Rooms/Kitchen/Kwiatek/Node" index="0"]
+position = Vector2(7280, 416)
+
+[node name="Second" parent="Rooms/Kitchen/Kwiatek/Node" index="1"]
+position = Vector2(7616, 376)
 
 [node name="WindowsRoom" type="Area2D" parent="Rooms"]
 position = Vector2(1604, 951)
@@ -171,6 +220,9 @@ position = Vector2(823, 455)
 position = Vector2(415, 471)
 texture = ExtResource("4_l41q1")
 
+[node name="Casette" parent="Rooms/LivingRoom" instance=ExtResource("13_2jgoc")]
+position = Vector2(341, 473)
+
 [node name="StairsGroundFloor" type="Area2D" parent="Rooms"]
 position = Vector2(5492, 953)
 script = ExtResource("2_qfp4q")
@@ -221,6 +273,12 @@ texture = ExtResource("10_ua66d")
 position = Vector2(352, 254)
 texture = ExtResource("10_txvk8")
 
+[node name="Finger" parent="Rooms/BathRoom" instance=ExtResource("21_sf4xg")]
+position = Vector2(376, 374)
+
+[node name="CollisionShape" parent="Rooms/BathRoom/Finger" index="1"]
+position = Vector2(-24.5, -12)
+
 [node name="PlayRoom" type="Area2D" parent="Rooms"]
 position = Vector2(329, 1716)
 script = ExtResource("2_qfp4q")
@@ -228,6 +286,13 @@ script = ExtResource("2_qfp4q")
 [node name="CollisionShape" type="CollisionShape2D" parent="Rooms/PlayRoom"]
 position = Vector2(2563.5, 289.5)
 shape = SubResource("RectangleShape2D_k0trm")
+
+[node name="Doll" parent="Rooms/PlayRoom" instance=ExtResource("21_nfbau")]
+position = Vector2(495, 484)
+
+[node name="Konik" type="Sprite2D" parent="Rooms/PlayRoom"]
+position = Vector2(903, 468)
+texture = ExtResource("22_iif5k")
 
 [node name="StairsMinusOne" type="Area2D" parent="Rooms"]
 position = Vector2(1618, 1712)
@@ -290,9 +355,8 @@ texture = ExtResource("24_aata7")
 position = Vector2(1520, 199)
 texture = ExtResource("25_lo5mf")
 
-[node name="GrampsLeg" type="Sprite2D" parent="Rooms/GalleryRoom"]
-position = Vector2(1624, 391)
-texture = ExtResource("26_8tfx1")
+[node name="Leg" parent="Rooms/GalleryRoom" instance=ExtResource("27_gja5j")]
+position = Vector2(1623, 388)
 
 [node name="PuppetRoom" type="Area2D" parent="Rooms"]
 position = Vector2(1603, 2472)
@@ -309,7 +373,7 @@ position = Vector2(107, 115)
 shape = SubResource("RectangleShape2D_rsmh4")
 
 [node name="Kukielka1" type="Sprite2D" parent="Rooms/PuppetRoom"]
-position = Vector2(92, 237)
+position = Vector2(141, 232)
 texture = ExtResource("27_quiil")
 
 [node name="Kukielka2" type="Sprite2D" parent="Rooms/PuppetRoom"]
@@ -317,12 +381,19 @@ position = Vector2(277, 239)
 texture = ExtResource("28_h2eif")
 
 [node name="Kukielka3" type="Sprite2D" parent="Rooms/PuppetRoom"]
-position = Vector2(450, 214)
+position = Vector2(365, 216)
 texture = ExtResource("29_7427q")
 
 [node name="CollisionShape" type="CollisionShape2D" parent="Rooms/PuppetRoom"]
 position = Vector2(1247, 292)
 shape = SubResource("RectangleShape2D_el7xp")
+
+[node name="Puppet" parent="Rooms/PuppetRoom" instance=ExtResource("31_j2gbp")]
+position = Vector2(285, 256)
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Rooms/PuppetRoom/Puppet"]
+position = Vector2(-16, 32)
+shape = SubResource("RectangleShape2D_da2up")
 
 [node name="BathRoomV2" type="Area2D" parent="Rooms"]
 position = Vector2(2908, 2473)
@@ -446,8 +517,10 @@ offset = Vector2(0, -76)
 [connection signal="mouse_exited" from="Rooms/BathRoomV2" to="Rooms/BathRoomV2" method="_on_mouse_exited"]
 
 [editable path="Rooms/GrandpaHall/StairsDown"]
+[editable path="Rooms/Kitchen/Kwiatek"]
 [editable path="Rooms/WindowsRoom/StairsDown"]
 [editable path="Rooms/StairsGroundFloor/StairsUp"]
+[editable path="Rooms/BathRoom/Finger"]
 [editable path="Rooms/StairsMinusOne/StairsUp"]
 [editable path="Rooms/StairsMinusOne/StairsDown"]
 [editable path="Rooms/PuppetRoom/StairsUp"]

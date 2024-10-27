@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqf34jyhdjohu"]
+
+[ext_resource type="Script" path="res://scenes/house/doll.gd" id="1_klr1y"]
+[ext_resource type="Texture2D" uid="uid://cgufkp47ugbio" path="res://assets/lalka.png" id="2_7is73"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nxtnn"]
+radius = 43.0
+height = 120.0
+
+[node name="Doll" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_klr1y")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_7is73")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_nxtnn")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

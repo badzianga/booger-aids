@@ -26,12 +26,12 @@ func _input(event: InputEvent) -> void:
 
 func display_dialog(id: String) -> void:
 	visible = true
-	_text_label.bbcode_text = &"[center]" + GlobalVariables.dialogs[id] + &"[/center]"
+	_text_label.bbcode_text = &"[center]" + GlobalVariables.descriptions[id]["text"] + &"[/center]"
 	get_tree().paused = true
 	print("Dialog ", id, " displayed")
 
 func display_dialog_cursed(id: String) -> void:
 	visible = true
-	_text_label.bbcode_text = &"[center][color=#b40000]" + GlobalVariables.dialogs[id] + &"[/color][/center]"
+	_text_label.bbcode_text = &"[center][color=#b40000]" + GlobalVariables.descriptions[id + "_fuck"]["text"] + &"[/color][/center]"
 	get_tree().paused = true
 	print("Dialog ", id, " displayed")

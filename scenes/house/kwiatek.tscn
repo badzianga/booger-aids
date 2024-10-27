@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4uetbwx3sqtx"]
+
+[ext_resource type="Texture2D" uid="uid://cxn2ky3osu4rf" path="res://assets/home/pokoj_babci/kwiatek.png" id="1_3pe7j"]
+[ext_resource type="Script" path="res://scenes/house/kwiatek.gd" id="2_56b0b"]
+
+[node name="Kwiatek" type="Sprite2D"]
+position = Vector2(836, 168)
+rotation = 3.14159
+texture = ExtResource("1_3pe7j")
+script = ExtResource("2_56b0b")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="First" type="Marker2D" parent="Node"]
+position = Vector2(836, 168)
+rotation = 3.14159
+
+[node name="Second" type="Marker2D" parent="Node"]
+position = Vector2(836, 168)
+rotation = 3.14159
