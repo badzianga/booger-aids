@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cyge7dt6ngi5y"]
+[gd_scene load_steps=3 format=3 uid="uid://cyge7dt6ngi5y"]
 
 [ext_resource type="FontFile" uid="uid://bggd4r03ecgpu" path="res://assets/fonts/Horrors.ttf" id="1_7r10w"]
+[ext_resource type="Script" path="res://scenes/ui/victory_screen.gd" id="1_m1aln"]
 
 [node name="VictoryScreen" type="CanvasLayer"]
+script = ExtResource("1_m1aln")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

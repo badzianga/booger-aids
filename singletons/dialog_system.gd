@@ -25,6 +25,7 @@ func _input(event: InputEvent) -> void:
 	whispering.stop()
 	closed.emit()
 	GlobalVariables.can_noise = true
+	Diary.set_process_input(true)
 
 
 func display_dialog(id: String) -> void:
@@ -34,6 +35,7 @@ func display_dialog(id: String) -> void:
 	print("Dialog ", id, " displayed")
 	GlobalVariables.can_noise = false
 	whispering.play()
+	Diary.set_process_input(false)
 
 func display_dialog_cursed(id: String) -> void:
 	visible = true
@@ -42,3 +44,4 @@ func display_dialog_cursed(id: String) -> void:
 	print("Dialog ", id, " displayed")
 	GlobalVariables.can_noise = false
 	whispering.play()
+	Diary.set_process_input(false)

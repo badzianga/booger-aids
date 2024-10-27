@@ -2,7 +2,13 @@ extends Node2D
 
 
 func _ready() -> void:
-	# TODO: enable all singletons
+	Diary.set_process(true)
+	Diary.set_physics_process(true)
+	Diary.set_process_input(true)
+	TvLayer.visible = true
+	TvLayer.set_physics_process(true)
+	UserInterface.visible = true
+	UserInterface.set_physics_process(true)
 	
 	DialogSystem.display_dialog("tut1")
 	await DialogSystem.closed
