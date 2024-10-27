@@ -66,8 +66,29 @@ const descriptions := {
 		"text": "This huge hole in the ground contains a culinary masterpiece with very unique meat.",
 	},
 	"tut1": {
-		"text": "Browar"
-	}
+		"text": "My grandparents invited me to their house for the holidays."
+	},
+	"tut2": {
+		"text": "My dear gramps gave me a cassette with the game so that I wouldn't be bored."
+	},
+	"tut3": {
+		"text": "After putting the cassette in, I saw a strange man on a bicycle and woke up here."
+	},
+	"tut4": {
+		"text": "After putting the cassette in, I saw a strange man on a bicycle and woke up here."
+	},
+	"tut5": {
+		"text": "*LETS PLAY A GAME*"
+	},
+	"tut6": {
+		"text": "You remember yourself and I will show you the way out."
+	},
+	"tut7": {
+		"text": "Click mouse to move around the floors and collect items from your childhood."
+	},
+	"tut8": {
+		"text": "And REMEMBER to turn up the TV, otherwise the game will run out. Look at the lights and you will know..."
+	},
 }
 
 var collected: Array[String] = []

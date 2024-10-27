@@ -14,3 +14,9 @@ func _ready() -> void:
 	await DialogSystem.closed
 	DialogSystem.display_dialog("tut5")
 	await DialogSystem.closed
+	DialogSystem.display_dialog("tut6")
+	await DialogSystem.closed
+	DialogSystem.display_dialog("tut7")
+	await DialogSystem.closed
+	DialogSystem.display_dialog("tut8")
+	await DialogSystem.closed
