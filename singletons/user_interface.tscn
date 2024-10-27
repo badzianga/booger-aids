@@ -4,6 +4,7 @@
 
 [node name="UserInterface" type="CanvasLayer"]
 script = ExtResource("1_3kjqh")
+_max_bar_value = 120.0
 
 [node name="Margin" type="MarginContainer" parent="."]
 anchors_preset = 15
